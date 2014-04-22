@@ -1,0 +1,21 @@
+[
+    "index.md",
+    [
+        "about.md",
+        "skills.md",
+        "more-me.md"
+    ],
+    [
+        "experience.md",
+        "sears.md",
+        "sbb.md",
+        "education.md"
+    ],
+    [
+        "stuff.md",
+        "my-stuff.md",
+        "passion.md",
+        "learning.md"
+    ],
+    "contact.md"
+]
