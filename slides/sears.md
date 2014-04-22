@@ -4,7 +4,7 @@
   <li>Introduced <span class="accent-secondary">TDD</span> &amp; <span class="accent-secondary">CDCI</span></li>
   <li>Admin'd the <span class="accent-secondary">CI</span> box</li>
   <li>Migrated SVN repo's to <span class="accent-secondary">Git</span> &nbsp;<span class="muted">(and started Gitflow)</span></li>
-  <li>Led Development of &nbsp;<a href="https://play.google.com/store/apps/details?id=com.sears.tryon" title="Google Play" target="_blank">TryOn</a> PoC</li>
+  <li>Lead Developer of &nbsp;<a href="https://play.google.com/store/apps/details?id=com.sears.tryon" title="Google Play" target="_blank">TryOn</a> PoC</li>
   <li>Mentorship<ul style="list-style-type: circle;">
       <li>
         Effective Collaboration&nbsp;
