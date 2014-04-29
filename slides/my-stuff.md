@@ -9,8 +9,8 @@
                               href="http://hoda-tools.herokuapp.com/#/character">link</a>
   </li>
   <li>
-    <a>TryOn</a>&nbsp;
-    PoC with websockets
+    <a>Fitting Room Job Queues</a>&nbsp;
+    Websockets &amp; ExpressJS
     <span class="muted">
       (click <a href="http://express-socket-messenger.aws.af.cm/associate"
                 target="_blank">here</a>
