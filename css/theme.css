@@ -166,6 +166,11 @@ ul.xs > li:before {
 
 .muted {
   color: #999999; }
+  .muted a.ref {
+    color: #999999 !important;
+    text-decoration: underline !important;
+    margin-right: .5em;
+    margin-left: .5em; }
 
 .accent-positive {
   color: #66cc66; }
