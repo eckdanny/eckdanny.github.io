@@ -10,7 +10,7 @@
   </li>
   <li>
     <a>TryOn</a>&nbsp;
-    PoC with websockets
+    Websockets
     <span class="muted">
       (click <a href="http://express-socket-messenger.aws.af.cm/associate"
                 target="_blank">here</a>
