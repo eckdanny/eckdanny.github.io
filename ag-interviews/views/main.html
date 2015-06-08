@@ -1,6 +1,26 @@
-<form> <div class="row"> <div class="col-md-12"> <div class="form-group"> <label class="hidden" for="search" ng-bind="'Search'"></label> <input type="text" class="form-control" id="search" placeholder="Search..." ng-model="search.context.tags"> </div> </div> <div class="col-md-3"> <div class="form-group"> <span>Level</span> <div class="btn-group"> <label class="btn btn-default" ng-model="query.context.levels[10]" btn-checkbox ng-bind="'10'"></label> <label class="btn btn-default" ng-model="query.context.levels[9]" btn-checkbox ng-bind="'9'"></label> <label class="btn btn-default" ng-model="query.context.levels[7]" btn-checkbox ng-bind="'7'"></label> </div> </div> </div> <div class="col-md-6 text-center"> <div class="form-group"> <span>Stage</span> <div class="btn-group"> <label class="btn btn-default" ng-model="query.context.stages[1]" btn-checkbox ng-bind="'Recruiting'"></label> <label class="btn btn-default" ng-model="query.context.stages[2]" btn-checkbox ng-bind="'Technical'"></label> <label class="btn btn-default" ng-model="query.context.stages[3]" btn-checkbox ng-bind="'Manager'"></label> </div> </div> </div> <div class="col-md-3 text-right"> <div class="form-group"> <div class="btn-group"> <label class="btn btn-default" ng-model="search.context.isRemoteOk" btn-radio="true" ng-bind="'Phone OK'"></label> <label class="btn btn-default" ng-model="search.context.isRemoteOk" btn-radio="undefined" ng-bind="'All'"></label> </div> </div> </div> </div> </form> <!--
+<div class="container-fluid"> <div class="row"> <div class="col-md-4 col-md-push-8" role="complementary"> <form id="ag-search-form" class="card-2"> <div class="row"> <div class="col-md-12 hidden-xs hidden-sm text-center"> <label style="font-size: 120%"><i class="glyphicon glyphicon-search"></i> FINDER</label> <span class="label label-default" ng-bind="ds.length" style="position: absolute;
+                  z-index: 999;
+                  right: 10px;
+                  text-align: right;
+                  top: 4px"></span> <!--               <span
+                class="initialism text-muted"
+                style="
+                  position: absolute;
+                  z-index: 999;
+                  right: 10px;
+                  text-align: right;
+                  top: 3px;
+                "
+                ng-bind-template="({{ ds.length }})"
+              ></span> --> </div> <div class="col-sm-12"> <div class="form-group clearfix"> <label for="search" class="control-label hidden" ng-bind="'Search'"></label> <input type="text" class="form-control pull-right" id="search" placeholder="Search..." ng-model="search.context.tags" style="border-radius: 0"> </div> </div> <div class="col-md-12 col-sm-3"> <div class="form-horizontal form-group"> <label class="control-label">Level</label> <div class="btn-group pull-right"> <label class="btn btn-default" ng-model="query.context.levels[10]" btn-checkbox ng-bind="'10'"></label> <label class="btn btn-default" ng-model="query.context.levels[9]" btn-checkbox ng-bind="'9'"></label> <label class="btn btn-default" ng-model="query.context.levels[7]" btn-checkbox ng-bind="'7'"></label> </div> </div> </div> <div class="col-sm-5 col-md-12"> <div class="form-horizontal form-group"> <label class="control-label">Stage</label> <div class="btn-group pull-right"> <label class="btn btn-default" ng-model="query.context.stages[1]" btn-checkbox ng-bind="'Screen'"></label> <label class="btn btn-default" ng-model="query.context.stages[2]" btn-checkbox ng-bind="'Technical'"></label> <label class="btn btn-default" ng-model="query.context.stages[3]" btn-checkbox ng-bind="'Manager'"></label> </div> </div> </div> <div class="col-sm-4 col-md-12"> <div class="form-horizontal form-group"> <label class="control-label">Restrictions</label> <div class="btn-group pull-right"> <label class="btn btn-default" ng-model="search.context.isRemoteOk" btn-radio="true" ng-bind="'Phone OK'"></label> <label class="btn btn-default" ng-model="search.context.isRemoteOk" btn-radio="undefined" ng-bind="'All'"></label> </div> </div> </div> </div> </form> </div> <div class="col-md-8 col-md-pull-4"> <div ng-repeat="d in ds = (questionsFiltered | filter:search)" class="question card-1" style="margin-bottom: 10px;
+              padding: 10px"> <div hljs ng-bind-html="::d.body"></div> <div> <a href="#"> <h4 ng-if="d.Notes" ng-click="d.isVisibleNotes = !d.isVisibleNotes" ng-bind="'Notes'" class="text-danger"></h4> </a> <div ng-show="d.isVisibleNotes" hljs ng-bind-html="::d.Notes"></div> <div ng-show="d.isVisibleNotes" class="clearfix"> <!--
+                <span
+                  popover="moar stuff..."
+                  popover-trigger="mouseenter"
+                  class="label label-info"
+                ><i class="glyphicon glyphicon-info-sign"
+                ></i> Meta</span>
+                --> <span class="label label-info pull-right"> <i class="glyphicon glyphicon-file"></i> <tt ng-bind="::d.context.file"></tt></span> </div> </div> </div> <alert ng-if="!ds.length">No Results</alert> </div> </div> </div> <!--
 <pre ng-bind="query | json"></pre>
 <pre ng-bind="search | json"></pre>
---> <div ng-repeat="d in ds = (questionsFiltered | filter:search)" style="border: 1px solid blue;
-    margin-bottom: 10px;
-    padding: 10px"> <div hljs ng-bind-html="::d.body"></div> <div style="border: 1px solid red"> <a href="#"> <h4 ng-if="d.Notes" ng-click="d.isVisibleNotes = !d.isVisibleNotes" ng-bind="'Notes'"></h4> </a> <div ng-show="d.isVisibleNotes" hljs ng-bind-html="::d.Notes"></div> </div> </div> <alert ng-if="!ds.length">No Results</alert>
+-->

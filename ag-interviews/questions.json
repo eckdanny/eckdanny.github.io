@@ -1,14 +1,37 @@
 [
     {
         "context": {
+            "file": "questions/browser-http-request.md",
+            "author": "Danny Eck <daniel.eck@accenture.com>",
+            "levels": [
+                "9"
+            ],
+            "tags": [
+                "http",
+                "browser"
+            ],
+            "stages": [
+                "2"
+            ],
+            "isRemoteOk": true
+        },
+        "body": "<h3>What is the lifecycle of a browser HTTP request?</h3>\n",
+        "Notes": "<ul>\n<li>Browser resolves server's host name</li>\n<li>Browser sends the request to the server</li>\n<li>Request terminal HTTPS/SPDY</li>\n<li>HTTP-level caching</li>\n<li>HAProxy load balances the traffic</li>\n<li>Web server receives the request and passes control to application code</li>\n<li>Application prepares a response</li>\n<li>Response goes through previous layers back to the browser</li>\n</ul>\n"
+    },
+    {
+        "context": {
             "file": "questions/cors.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "levels": [
-                9
+                "9"
             ],
             "tags": [
                 "cors",
                 "http"
+            ],
+            "stages": [
+                "1",
+                "2"
             ],
             "isRemoteOk": true
         },
@@ -25,8 +48,12 @@
                 "crud"
             ],
             "levels": [
-                9,
-                10
+                "9",
+                "10"
+            ],
+            "stages": [
+                "1",
+                "2"
             ],
             "isRemoteOk": true
         },
@@ -39,42 +66,79 @@
             "author": "Jacob Larson <jacob.j.larson@accenture.com>",
             "isRemoteOk": false,
             "levels": [
-                9,
-                10
+                "9",
+                "10"
             ],
             "tags": [
                 "css"
+            ],
+            "stages": [
+                "2"
             ]
         },
         "body": "<h3>What elements would be targetted by the following CSS selectors?</h3>\n<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n\n* {}\n</span></span></code></pre>\n",
-        "Notes": "<ul>\n<li>An element whose <em>id</em> is <code>container</code></li>\n<li>Any element whose <em>class</em> is <code>container</code></li>\n<li>Either <code>h1</code> or <code>h2</code> elements with a <em>class</em> of <code>error</code></li>\n<li>Any element with <em>both</em> <code>message</code> and <code>success</code> classes</li>\n<li>Any element whose <code>type</code> attribute is <code>text</code></li>\n<li>Any element with a <code>href</code> attribute</li>\n<li>Any <code>column</code> class which is a <em>direct decendant</em> of <code>container</code></li>\n<li>Any <code>column</code> class which is a <em>decendant</em> of <code>container</code></li>\n<li>An anchor with <em>psuedo-class</em> of hover (mouseover)</li>\n<li>Anything/Everything (wildcard)</li>\n</ul>\n"
+        "Notes": "<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* An element whose ID is `container` */</span> \n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose CLASS is `container` */</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Either `h1` or `h2` elements with a CLASS of `error` */</span> \n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with BOTH `message` and `success` classes */</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose `type` attribute is `text` */</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with a `href` attribute */</span> \n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DIRECT DECENDANT of `container` */</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DECENDANT of `container` */</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n<span class=\"hljs-comment\">/* An anchor with PSUEDO CLASS of HOVER (mouseover) */</span> \n\n* {}\n<span class=\"hljs-comment\">/* Anything/Everything (wildcard) */</span> \n</span></span></code></pre>\n"
     },
     {
         "context": {
             "file": "questions/db.row-col-vs-document.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "levels": [
-                9,
-                10
+                "9",
+                "7"
             ],
             "tags": [
                 "database",
                 "nosql"
             ],
+            "stages": [
+                "2"
+            ],
             "isRemoteOk": true
         },
-        "body": "<h3>Compare and contrast row/column-oriented and document-oriented datastores</h3>\n<p>_e.g.; How is MongoDB different from MySQL? What about normalization?</p>\n",
+        "body": "<h3>Compare and contrast row/column-oriented and document-oriented datastores</h3>\n<p><em>e.g.;</em> How is MongoDB different from MySQL? What about normalization?</p>\n",
         "Notes": "<p>@todo</p>\n"
+    },
+    {
+        "context": {
+            "file": "questions/dev-tools.md",
+            "author": "Jacob Larson <jacob.j.larson@accenture.com>",
+            "contributors": [
+                "Danny Eck <daniel.eck@accenture.com>"
+            ],
+            "levels": [
+                "7",
+                "9",
+                "10"
+            ],
+            "tags": [
+                "workflow",
+                "dev",
+                "tools"
+            ],
+            "stages": [
+                "1"
+            ],
+            "isRemoteOk": true
+        },
+        "body": "<h3>What are your favorite development tools?</h3>\n",
+        "Notes": "<h4>Good</h4>\n<ul>\n<li>Grunt</li>\n<li>Gulp</li>\n<li>CoffeeScript</li>\n<li>Less</li>\n<li>Sass</li>\n<li>Stylus</li>\n<li>LiveReload, BrowserSync</li>\n</ul>\n<h4>Great</h4>\n<ul>\n<li>Karma</li>\n<li>Babel</li>\n<li>Tracur</li>\n<li>TypeScript</li>\n<li>Sinon</li>\n<li>Chai</li>\n<li>Mocha</li>\n<li>Jasmine</li>\n<li>Weinre</li>\n</ul>\n"
     },
     {
         "context": {
             "file": "questions/dns.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "tags": [
-                "http"
+                "http",
+                "dns"
             ],
             "levels": [
-                9
+                "9",
+                "10"
+            ],
+            "stages": [
+                "1",
+                "2"
             ],
             "isRemoteOk": true
         },
@@ -86,17 +150,38 @@
             "file": "questions/es6-fav-feature.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "levels": [
-                9,
-                10
+                "9",
+                "10"
             ],
             "tags": [
                 "js",
                 "javascript"
             ],
+            "stages": [
+                "1"
+            ],
             "isRemoteOk": true
         },
         "body": "<h3>What's your favorite feature of ES6?</h3>\n",
         "Notes": "<p>Something like...</p>\n<ul>\n<li>Destructuring</li>\n<li>Native Module Support</li>\n<li>Generators</li>\n<li>Template Literals</li>\n<li>Native Promises</li>\n<li>Spread</li>\n<li>Arrow Function Syntax</li>\n<li>Native Classes</li>\n</ul>\n"
+    },
+    {
+        "context": {
+            "file": "questions/eventual-consistency.md",
+            "author": "Danny Eck <daniel.eck@accenture.com>",
+            "levels": [
+                "7"
+            ],
+            "tags": [
+                "database"
+            ],
+            "stages": [
+                "2"
+            ],
+            "isRemoteOk": true
+        },
+        "body": "<h3>What is &quot;eventual consistency&quot;?</h3>\n",
+        "Notes": "<p>@todo</p>\n"
     },
     {
         "context": {
@@ -106,57 +191,105 @@
                 "Danny Eck <daniel.eck@accenture.com>"
             ],
             "levels": [
-                9,
-                10
+                "9",
+                "10"
             ],
             "tags": [
                 "javascript",
+                "duplicator",
+                "duplicate",
+                "array",
                 "js"
+            ],
+            "stages": [
+                "2"
             ],
             "isRemoteOk": false
         },
-        "body": "<h3>Implement an array duplicator function</h3>\n<p>Write a function <code>duplicate()</code> which accepts an array input and returns 2 copies of the elements.</p>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> inputArr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>];\nduplicate(inputArr); <span class=\"hljs-comment\">// &lt;= returns [1, 2, 3, 1, 2, 3]</span>\n\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">duplicate</span>(<span class=\"hljs-params\">arr</span>) </span>{\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
+        "body": "<h3>Implement an array duplicator function</h3>\n<p>Write a function <code>duplicate()</code> which accepts an array and returns a flattened array of two copies.</p>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> inputArr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>];\nduplicate(inputArr); <span class=\"hljs-comment\">// &lt;= returns [1, 2, 3, 1, 2, 3]</span>\n\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">duplicate</span>(<span class=\"hljs-params\">arr</span>) </span>{\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
         "Notes": "<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">duplicate</span>(<span class=\"hljs-params\">arr</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> arr.concat(arr);\n}\n</code></pre>\n<p><em>or</em></p>\n<p>with loop control structures</p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">duplicate</span>(<span class=\"hljs-params\">arr</span>) </span>{\n  <span class=\"hljs-keyword\">var</span> i, j, out = [], N = arr.length;\n  <span class=\"hljs-keyword\">for</span> (i=<span class=\"hljs-number\">0</span>; i&lt;<span class=\"hljs-number\">2</span>; i++) {\n    <span class=\"hljs-keyword\">for</span> (j=<span class=\"hljs-number\">0</span>; j&lt;N; j++) {\n      out.push(arr[j]);\n    }\n  }\n  <span class=\"hljs-keyword\">return</span> out;\n}\n</code></pre>\n<blockquote>\n<p>Brownie points if the candidate first asks whether it is desired to do in-place operations if</p>\n</blockquote>\n"
     },
     {
         "context": {
             "file": "questions/js.array-length.md",
             "author": "Jacob Larson <jacob.j.larson@accenture.com>",
+            "contributors": [
+                "Danny Eck <daniel.eck@accenture.com>"
+            ],
             "levels": [
-                9,
-                10
+                "9",
+                "10"
             ],
             "tags": [
-                "JS"
+                "js",
+                "array",
+                "length",
+                "javascript"
             ],
-            "isRemoteOk": false
+            "stages": [
+                "2"
+            ]
         },
-        "body": "<h3>What is length of myArray?</h3>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> myArray = [];\nmyArray.push(<span class=\"hljs-number\">1</span>);\nmyArray.push(<span class=\"hljs-number\">2</span>);\n</code></pre>\n",
-        "Notes": "<p>The <code>length</code> of <code>myArray</code> is <code>2</code>.</p>\n"
+        "body": "<h3>What is length of myArray?</h3>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> myArray = [];\nmyArray.push(<span class=\"hljs-number\">1</span>);\nmyArray.push(<span class=\"hljs-number\">2</span>);\n\nmyArray.length; <span class=\"hljs-comment\">// &lt;= ?</span>\n</code></pre>\n<h4>What is the value of <code>myArray[2]</code>?</h4>\n<pre><code class=\"language-javascript\">myArray[<span class=\"hljs-number\">2</span>]; <span class=\"hljs-comment\">// &lt;= ?</span>\n</code></pre>\n",
+        "Notes": "<p>The <code>length</code> of <code>myArray</code> is <code>2</code>.</p>\n<p>The value <code>myArray[2]</code> is <code>undefined</code>. The candidate should mention that arrays in javascript are <em>zero-indexed</em> (meaning the first element in the array is at position <code>0</code>).</p>\n"
     },
     {
         "context": {
             "file": "questions/js.closures-vs-prototypes.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
-            "tags": [
-                "js",
-                "javascript"
-            ],
             "levels": [
-                9
+                "7"
+            ],
+            "tags": [
+                "javascript",
+                "closure",
+                "prototype",
+                "oop",
+                "js"
+            ],
+            "stages": [
+                "2"
             ],
             "isRemoteOk": true
         },
         "body": "<h3>What are the tradeoffs between closures and prototypes in JavaScript?</h3>\n",
-        "Notes": "<p>Inheritance, extensibility vs. visibility/privacy</p>\n"
+        "Notes": "<p>@todo</p>\n"
+    },
+    {
+        "context": {
+            "file": "questions/js.dashy.md",
+            "author": "Adam Clark <adam.m.clark@accenture.com>",
+            "contributors": [
+                "Danny Eck <daniel.eck@accenture.com>"
+            ],
+            "tags": [
+                "javascript",
+                "string",
+                "prototype",
+                "dashy",
+                "split",
+                "join",
+                "js"
+            ],
+            "levels": [
+                "9",
+                "10"
+            ],
+            "stages": [
+                "2"
+            ],
+            "isRemoteOk": false
+        },
+        "body": "<h3>Dashy</h3>\n<h4>A) Explain the following javascript snippet</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> str.split(<span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">'-'</span>);\n}\n\ndashy(<span class=\"hljs-string\">'hello'</span>); <span class=\"hljs-comment\">// &lt;= ???</span>\n</code></pre>\n<p> </p>\n<h4>B) How is the following implementation different?</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">String</span>.prototype.split.call(str, <span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">''</span>);\n}\n</code></pre>\n<p> </p>\n<h4>C) Implement a <code>dashy</code> for all instances of String</h4>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> awesome = <span class=\"hljs-string\">'Acquity'</span>;\nawesome.dashy(); <span class=\"hljs-comment\">// &lt;= 'A-c-q-u-i-t-y'</span>\n</code></pre>\n<p> </p>\n<h4>D) Why should you AVOID patching native prototypes (like <code>String</code>)?</h4>\n<p> </p>\n",
+        "Notes": "<p>Most prominently, it translates domain names, which can be easily memorized by humans, to the numerical IP addresses needed for the purpose of computer services and devices worldwide. The Domain Name System is an essential component of the functionality of most Internet services because it is the Internet's primary directory service.</p>\n<p>Translates internet names to IP addresses.</p>\n"
     },
     {
         "context": {
             "file": "questions/js.fibonacci.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "levels": [
-                9,
-                10
+                "9",
+                "10"
             ],
             "tags": [
                 "js",
@@ -168,7 +301,7 @@
             ],
             "isRemoteOk": false
         },
-        "body": "<h3>Implement a fibonacci number generator</h3>\n<p>Using the Fibonocci integer sequece <code>1, 1, 2, 3, 5, 8, 13, ...</code>, write a function <code>fib(i)</code> which returns the i-th element in the sequence. (The domain is all positive integers).</p>\n<pre><code>fib<span class=\"hljs-params\">(<span class=\"hljs-number\">1</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 1</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">2</span>)</span>:   <span class=\"hljs-comment\">// &lt;= 1</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">3</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 2</span>\n...\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">6</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 8</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">7</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 13</span>\n\n<span class=\"hljs-comment\">// Implement Me</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">fib</span><span class=\"hljs-params\">(i)</span> {</span>\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
+        "body": "<h3>Implement a fibonacci number generator</h3>\n<p>Using the Fibonocci integer sequece <code>1, 1, 2, 3, 5, 8, 13, ...</code>, write a function <code>fib(i)</code> which returns the i-th element in the sequence. (The domain is all positive integers).</p>\n<pre><code>fib<span class=\"hljs-params\">(<span class=\"hljs-number\">1</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 1</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">2</span>)</span>:   <span class=\"hljs-comment\">// &lt;= 1</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">3</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 2</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">4</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 3</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">5</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 5</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">6</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 8</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">7</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 13</span>\n...\n\n<span class=\"hljs-comment\">// Implement Me</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">fib</span><span class=\"hljs-params\">(i)</span> {</span>\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
         "Notes": "<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// A naive but convo-starting implementation</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">fib</span>(<span class=\"hljs-params\">i</span>) </span>{\n  <span class=\"hljs-keyword\">if</span> (i &lt; <span class=\"hljs-number\">3</span>) {\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-number\">1</span>;\n  } <span class=\"hljs-keyword\">else</span> {\n    <span class=\"hljs-keyword\">return</span> fib(i-<span class=\"hljs-number\">2</span>) + fib(i-<span class=\"hljs-number\">1</span>);\n  }\n}\n</code></pre>\n<p>Hint at memoization. Does the candidate grasp the concept? (Or at the very least recursion.) When they are talking it out, do they mention <code>base case</code>?</p>\n"
     },
     {
@@ -177,10 +310,16 @@
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "tags": [
                 "js",
+                "functional",
+                "repeat",
+                "string",
                 "javascript"
             ],
             "levels": [
-                9
+                "9"
+            ],
+            "stages": [
+                "2"
             ],
             "isRemoteOk": false
         },
@@ -196,8 +335,12 @@
                 "javascript"
             ],
             "levels": [
-                9,
-                10
+                "9",
+                "10"
+            ],
+            "stages": [
+                "1",
+                "2"
             ],
             "isRemoteOk": true
         },
@@ -209,12 +352,16 @@
             "file": "questions/js.iife.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "levels": [
-                9,
-                10
+                "9",
+                "10"
             ],
             "tags": [
                 "js",
                 "javascript"
+            ],
+            "stages": [
+                "1",
+                "2"
             ],
             "isRemoteOk": true
         },
@@ -230,23 +377,58 @@
                 "javascript"
             ],
             "levels": [
-                9
+                "9",
+                "7"
             ],
-            "isRmoteOk": false
+            "stages": [
+                "2"
+            ],
+            "isRemoteOk": false
         },
         "body": "<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Implement Rectangle psuedo-class</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Rectangle</span>(<span class=\"hljs-params\">l,w</span>) </span>{\n    <span class=\"hljs-keyword\">this</span>.length = l;\n    <span class=\"hljs-keyword\">this</span>.width  = w;\n}\n\nRectangle.prototype = <span class=\"hljs-built_in\">Object</span>.create(<span class=\"hljs-literal\">null</span>);\nRectangle.prototype.constructor = Rectangle;\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Implement #area (the instance method of Rectangle)</span>\n<span class=\"hljs-comment\">//</span>\nRectangle.prototype.area = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">this</span>.length * <span class=\"hljs-keyword\">this</span>.width;\n}\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Some Rectangle Tests...</span>\n<span class=\"hljs-comment\">//</span>\ndescribe(<span class=\"hljs-string\">'a rectangle'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">var</span> myRect = <span class=\"hljs-keyword\">new</span> Rectangle(<span class=\"hljs-number\">3</span>,<span class=\"hljs-number\">4</span>);\n    it(<span class=\"hljs-string\">'should be an instance of Rectangle'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect <span class=\"hljs-keyword\">instanceof</span> Rectangle).toBe(<span class=\"hljs-literal\">true</span>);\n    });\n    it(<span class=\"hljs-string\">'should have length and width props'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect.length).toEqual(<span class=\"hljs-number\">3</span>);\n        expect(myRect.width).toEqual(<span class=\"hljs-number\">4</span>);\n    });\n    it(<span class=\"hljs-string\">'should have an #area method'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect.area()).toEqual(<span class=\"hljs-number\">12</span>);\n    });\n});\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Implement Square to prototypically inherit from Rectangle</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Square</span>(<span class=\"hljs-params\">l</span>) </span>{\n    Rectangle.call(<span class=\"hljs-keyword\">this</span>, l, l);\n}\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Square Prototype Plumbing</span>\n<span class=\"hljs-comment\">//</span>\nSquare.prototype = <span class=\"hljs-built_in\">Object</span>.create(Rectangle.prototype);\nSquare.prototype.constructor = Square;\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Some Square tests...</span>\n<span class=\"hljs-comment\">//</span>\ndescribe(<span class=\"hljs-string\">'a square'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">var</span> mySquare = <span class=\"hljs-keyword\">new</span> Square(<span class=\"hljs-number\">5</span>);\n    it(<span class=\"hljs-string\">'should be an instance of Square'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(mySquare <span class=\"hljs-keyword\">instanceof</span> Square).toBe(<span class=\"hljs-literal\">true</span>);\n    });\n    it(<span class=\"hljs-string\">'should be an instance of Rectangle'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(mySquare <span class=\"hljs-keyword\">instanceof</span> Rectangle).toBe(<span class=\"hljs-literal\">true</span>);\n    });\n    it(<span class=\"hljs-string\">'should inherit #area'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(mySquare.area()).toBe(<span class=\"hljs-number\">25</span>);\n    });\n});\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// How would you implement a computed property `perimeter`?</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-built_in\">Object</span>.defineProperty(Rectangle.prototype, <span class=\"hljs-string\">'perimeter'</span>, {\n    get: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) </span>{\n        <span class=\"hljs-keyword\">return</span> <span class=\"hljs-number\">2</span> * (<span class=\"hljs-keyword\">this</span>.length + <span class=\"hljs-keyword\">this</span>.width);\n    }\n});\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Perimeter Tests...</span>\n<span class=\"hljs-comment\">//</span>\ndescribe(<span class=\"hljs-string\">'perimeter'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">var</span> myRect = <span class=\"hljs-keyword\">new</span> Rectangle(<span class=\"hljs-number\">3</span>,<span class=\"hljs-number\">4</span>),\n        mySquare = <span class=\"hljs-keyword\">new</span> Square(<span class=\"hljs-number\">5</span>);\n    it(<span class=\"hljs-string\">'should work'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect.perimeter).toEqual(<span class=\"hljs-number\">14</span>);\n        expect(mySquare.perimeter).toEqual(<span class=\"hljs-number\">20</span>);\n    });\n});\n</code></pre>\n",
         "Notes": "<p>Hello World</p>\n"
     },
     {
         "context": {
+            "file": "questions/js.jq.make-ps-red.md",
+            "author": "Danny Eck <daniel.eck@accenture.com>",
+            "levels": [
+                "9",
+                "10"
+            ],
+            "tags": [
+                "js",
+                "jquery",
+                "css",
+                "red",
+                "links",
+                "javascript"
+            ],
+            "stages": [
+                "2"
+            ],
+            "isRemoteOk": false
+        },
+        "body": "<h3>Set the color of the links red</h3>\n<p>Given the following <code>HTML</code> markup:</p>\n<pre><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"foo\"</span>&gt;</span>Foo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"bar\"</span>&gt;</span>Bar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"bizz\"</span>&gt;</span>Bizz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\n</code></pre>\n<p>Make the links red using:</p>\n<h4>CSS:</h4>\n<pre><code><span class=\"hljs-comment\">// Write some CSS...</span>\n</code></pre>\n<h4>JavaScript (jQuery):</h4>\n<pre><code class=\"language-javascript\">$(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  <span class=\"hljs-comment\">// Write some JS...</span>\n})()\n\n</code></pre>\n",
+        "Notes": "<h4>CSS:</h4>\n<pre><code class=\"language-css\"><span class=\"hljs-tag\">a</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> red</span></span>;\n}</span>\n</code></pre>\n<h4>JavaScript (jQuery):</h4>\n<pre><code class=\"language-javascript\">$(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  $(<span class=\"hljs-string\">'a'</span>).css(<span class=\"hljs-string\">'color'</span>, <span class=\"hljs-string\">'red'</span>);\n})();\n</code></pre>\n"
+    },
+    {
+        "context": {
             "file": "questions/js.reverse-words.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "levels": [
-                9,
-                10
+                "9",
+                "10"
             ],
             "tags": [
-                "JS"
+                "js",
+                "reverse",
+                "yoda",
+                "javascript"
+            ],
+            "isRemoteOk": false,
+            "stages": [
+                "2"
             ]
         },
         "body": "<h3>Fundamental Array Manipulations</h3>\n<p>Write a function <code>duplicate()</code> which accepts an array input and returns 2 copies of the elements.</p>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> say = <span class=\"hljs-string\">\"reverse in is yoda speaking\"</span>;\nyodaize(say); <span class=\"hljs-comment\">// Returns 'speaking yoda is in reverse'</span>\n\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">yodaize</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
@@ -265,23 +447,48 @@
                 "javascript"
             ],
             "levels": [
-                9,
-                10
+                "9",
+                "10"
+            ],
+            "stages": [
+                "2"
             ]
         },
-        "body": "<h3>What is the difference between <code>splice</code> and <code>slice</code>?</h3>\n<p>The value returned from both methods is equivalent. So how are they different?</p>\n<pre><code class=\"language-javascript\">[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].slice(<span class=\"hljs-number\">1</span>)   <span class=\"hljs-comment\">// returns [ 2, 3 ]</span>\n[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].splice(<span class=\"hljs-number\">1</span>)  <span class=\"hljs-comment\">// returns [ 2, 3 ]</span>\n</code></pre>\n",
-        "Notes": "<p>Hello World</p>\n"
+        "body": "<h3>What is the difference between <code>splice</code> and <code>slice</code>?</h3>\n<p>The value returned from both methods is equivalent. So how are they different?</p>\n<pre><code class=\"language-javascript\">[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].slice(<span class=\"hljs-number\">1</span>)   <span class=\"hljs-comment\">// &lt;= returns [ 2, 3 ]</span>\n[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].splice(<span class=\"hljs-number\">1</span>)  <span class=\"hljs-comment\">// &lt;= returns [ 2, 3 ]</span>\n</code></pre>\n",
+        "Notes": "<p>Hello World</p>\n<p>Candidate should probably use the words <code>side-effect</code> or <code>immutable</code> here.</p>\n"
+    },
+    {
+        "context": {
+            "file": "questions/js.strict.md",
+            "author": "Danny Eck <daniel.eck@accenture.com>",
+            "levels": [
+                "9",
+                "10"
+            ],
+            "tags": [
+                "js",
+                "strict",
+                "javascript"
+            ],
+            "isRemoteOk": true
+        },
+        "body": "<h3>What is <code>strict</code> mode? Why does it exist?</h3>\n",
+        "Notes": "<p>@todo</p>\n"
     },
     {
         "context": {
             "file": "questions/responsive-vs-adaptive.md",
             "author": "Danny Eck <daniel.eck@accenture.com>",
             "levels": [
-                9,
-                10
+                "7",
+                "9"
             ],
             "tags": [
-                "design"
+                "responsive",
+                "adaptive"
+            ],
+            "stages": [
+                "2"
             ],
             "isRemoteOk": true
         },
@@ -297,25 +504,18 @@
                 "http",
                 "waldo",
                 "crud"
+            ],
+            "stages": [
+                "2"
+            ],
+            "isRemoteOk": false,
+            "levels": [
+                "10",
+                "9",
+                "7"
             ]
         },
         "body": "<h3>REST Web APIs</h3>\n<p>Compose a request (psuedo-curl) for the following:</p>\n<h4>A) Given a RESTful resource <code>users</code>, retrieve all <code>users</code> with the name <code>waldo</code>:</h4>\n<p> </p>\n<h4>B) Change Waldo's <code>wearsGlasses</code> property to false given the following <code>user</code> data structure:</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// response</span>\n{\n    _id: <span class=\"hljs-string\">\"abc123\"</span>,\n    name: <span class=\"hljs-string\">\"waldo\"</span>,\n    wearsGlasses: <span class=\"hljs-literal\">true</span>\n}\n</code></pre>\n",
         "Notes": "<pre><code class=\"language-http\">// Retrieve all users named \"waldo\"\nGET /users?name=waldo\n</code></pre>\n<p>Change Waldo's <code>wearsGlasses</code> property to false:</p>\n<pre><code class=\"language-http\">PUT /users/abc123\n{\n  \"_id\": \"abc123\",\n  \"name\": \"waldo\",\n  \"wearsGlasses\": false\n}\n</code></pre>\n<p><em>or</em></p>\n<pre><code class=\"language-http\">PATCH /users/abc123\n{\n  \"wearsGlasses\": false\n}\n</code></pre>\n"
-    },
-    {
-        "context": {
-            "file": "questions/two.md",
-            "author": {
-                "name": "Danny Eck",
-                "email": "daniel.eck@accenture.com"
-            },
-            "tags": [
-                "one",
-                "question"
-            ]
-        },
-        "body": "<h3>How does the Foo become the Bar?</h3>\n<p>Good question. Iduno...</p>\n",
-        "Something": "alskdfj alksdfj alskdfj \n\nlaksdjflkajsdflkjasdf\n",
-        "Notes": "<p>asldfkj alsd jfas\ndfj\nasdkf\nas dfj\njasdfkl</p>\n<p>alsdjflkasdj f</p>\n<ul>\n<li>asdf</li>\n<li>asdf</li>\n<li>asdf</li>\n<li>asdfasdf</li>\n</ul>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// some javascript</span>\n(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">w</span>)</span>{\n  w.console.log(<span class=\"hljs-string\">'hello world!'</span>);\n})(<span class=\"hljs-built_in\">window</span>, <span class=\"hljs-literal\">undefined</span>);\n</code></pre>\n<blockquote>\n<p>a blockquote</p>\n</blockquote>\n<p>What about more code fencing?</p>\n<pre><code class=\"language-shell\"><span class=\"hljs-built_in\">echo</span> $<span class=\"hljs-params\">(whoami)</span> is awesome\n</code></pre>\n<p>Hizzle yea</p>\n"
     }
 ]
