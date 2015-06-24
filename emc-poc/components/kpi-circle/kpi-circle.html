@@ -1,0 +1,30 @@
+<div class="kpi-circle">
+  <div>
+    <div
+      style="
+        height: 50px;
+        width: 50px;
+        border: 2px solid {{color}};
+        border-radius: 50%;
+        display: inline-block;
+        -webkit-filter: drop-shadow(0 0 2px {{color}});
+      "
+    ></div>
+    <div
+      style="
+        line-height: 50px;
+        font-size: 20px;
+        margin-top: -54px;
+        color: white;
+      "
+      ng-bind="value"
+    >&nbsp;</div>
+  </div>
+  <div
+    class="row text-center"
+    style="
+      color: white;
+    "
+    ng-bind="label"
+  >&nbsp;</div>
+</div>
