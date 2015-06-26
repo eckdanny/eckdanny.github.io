@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> | CIBC templates</title>
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+<!-- about this page... -->
+<div class="row">
+  <h2>Feature Banners</h2>
+  <p>The <tt>feature banner</tt> component is overloaded IMO, but let us define as follows:</p>
+  <ul>
+    <li>a container</li>
+    <li>topical callout</li>
+    <li>may or may not contain accompanying media assets (video link, image) Foreground and Background</li>
+    <li>see Bryan's draft <tt>CIBC_Banner_Explanation.pdf</tt> for more specification</li>
+  </ul>
+  <p>
+    The <tt>feature banner</tt> component is composed (at minimum) of the following:
+  </p>
+</div> <!-- /about -->
+
+<!-- BG IMGS INTERCHANGE -->
+<div class="row">
+  <div class="column">
+    <div
+      class="feature-banner"
+      
+      style="
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+      "
+    >
+
+      <div
+        class="row"
+        data-equalizer="example-bg-toronto"
+        data-equalizer-mq="medium-up"
+      >
+
+        <!-- image-component -->
+        <!-- push-* needed when image not on left -->
+        <div
+          class="column medium-4 push-8"
+          data-equalizer-watch="example-bg-toronto"
+        >
+          <div
+            class="
+              fb-img-container
+              fb-img-abs-bottom
+            "
+            style="
+              background-color: pink;
+            "
+          >
+            
+            <img src="assets/images/bieber2.png">
+          </div>
+        </div> <!-- /image-component -->
+
+        <!-- content-component -->
+        <div
+          class="
+            column
+            medium-8
+            pull-4
+            text-left
+            small-only-text-center
+          "
+          data-equalizer-watch="example-bg-toronto"
+        >
+
+          <!-- Parsys content here -->
+          <div class="content">
+            <h3>Hug the Bottom</h3>
+            <p>
+              The image component should hug the right-hand side of this feature banner.
+            </p>
+            <p>
+              This is working if the impact *splat* of the ball is snug to the <tt>feature banner</tt> border in <em>non-mobile</em> viewports.
+            </p>
+            <ul class="hide-for-small-only">
+              <li>A list</li>
+              <li>to add</li>
+              <li>space to</li>
+              <li>see vertical</li>
+              <li>alignment</li>
+              <li>behavior</li>
+            </ul>
+            <div class="cta">
+              <button class="small-expand margin-bottom-none">
+                Learn More
+              </button>
+            </div>
+          </div> <!-- /parsys -->
+
+        </div> <!-- /content-component -->
+      </div>
+    </div> <!-- /feature-banner -->
+  </div>
+</div>
+
+<!-- BG IMGS -->
+<div class="row">
+  <div class="column">
+    <div
+      class="feature-banner"
+      data-interchange="[/assets/images/toronto.png, (default)]"
+      style="
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+      "
+    >
+
+      <div
+        class="row"
+        data-equalizer="example-bg-toronto"
+        data-equalizer-mq="medium-up"
+      >
+
+        <!-- image-component -->
+        <!-- push-* needed when image not on left -->
+        <div
+          class="column medium-4 push-8"
+          data-equalizer-watch="example-bg-toronto"
+        >
+          <div
+            class="
+              fb-img-container
+              fb-img-abs-bottom
+            "
+            style="
+              background-color: pink;
+            "
+          >
+            
+            <img src="assets/images/bieber2.png">
+          </div>
+        </div> <!-- /image-component -->
+
+        <!-- content-component -->
+        <div
+          class="
+            column
+            medium-8
+            pull-4
+            text-left
+            small-only-text-center
+          "
+          data-equalizer-watch="example-bg-toronto"
+        >
+
+          <!-- Parsys content here -->
+          <div class="content">
+            <h3>Hug the Bottom</h3>
+            <p>
+              The image component should hug the right-hand side of this feature banner.
+            </p>
+            <p>
+              This is working if the impact *splat* of the ball is snug to the <tt>feature banner</tt> border in <em>non-mobile</em> viewports.
+            </p>
+            <ul class="hide-for-small-only">
+              <li>A list</li>
+              <li>to add</li>
+              <li>space to</li>
+              <li>see vertical</li>
+              <li>alignment</li>
+              <li>behavior</li>
+            </ul>
+            <div class="cta">
+              <button class="small-expand margin-bottom-none">
+                Learn More
+              </button>
+            </div>
+          </div> <!-- /parsys -->
+
+        </div> <!-- /content-component -->
+      </div>
+    </div> <!-- /feature-banner -->
+  </div>
+</div>
+
+
+<script src="bower_components/foundation/js/vendor/modernizr.js"></script>
+<script src="bower_components/foundation/js/vendor/jquery.js"></script>
+<script src="assets/scripts/cibc.rds.js"></script>
+<script src="bower_components/foundation/js/vendor/fastclick.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.js"></script>
+
+<script>
+  $(document).foundation();
+</script>
+
+
+<script type="text/javascript">
+  (function() { 'use strict';
+
+    // On DOM Ready
+    $(function() {
+
+      // Register Event Handlers
+      $(window)
+        .on('resize', onResizeThrottled)
+        .trigger('resize');
+
+      // $('[data-rds]').rds({
+      //   propertyName: "a custom value"
+      // });
+
+      $('#rds-update')
+        .click(function(e) {
+          $('#rds-field')
+            .text( $(this).prev().val() )
+            .show();
+        });
+
+    });
+
+    var onResize = function(e) {
+      console.log('I was resized');
+      if (Foundation.utils.is_small_only()) {
+        console.log('to a small viewport');
+      }
+    };
+    var onResizeThrottled = Foundation.utils.throttle(onResize, 500);
+
+  })();
+</script>
+
+
+
+    
+<script src="bower_components/foundation/js/vendor/modernizr.js"></script>
+<script src="bower_components/foundation/js/vendor/jquery.js"></script>
+<script src="assets/scripts/cibc.rds.js"></script>
+<script src="bower_components/foundation/js/vendor/fastclick.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.js"></script>
+
+<script>
+  $(document).foundation();
+</script>
+
+
+  </body>
+</html>
