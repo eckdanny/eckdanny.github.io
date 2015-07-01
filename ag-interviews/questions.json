@@ -2,6 +2,39 @@
 	{
 		"meta": {
 			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"isRemoteOk": false,
+			"levels": [
+				"9",
+				"10"
+			],
+			"tags": [
+				"css",
+				"flow",
+				"level",
+				"element",
+				"block",
+				"inline",
+				"inline-block"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"html/css"
+			],
+			"isPublished": true,
+			"isMultiPart": false,
+			"citations": [
+				"https://css-tricks.com/interview-questions-css/"
+			],
+			"file": "questions/block-vs-inline-block-vs-inline.md"
+		},
+		"body": "<h3>What is the difference between inline, inline-block, and block?</h3>\n",
+		"notes": "<p>Bonus points for bringing up specific details like the fact that you can't transform inline elements.</p>\n"
+	},
+	{
+		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
 			"levels": [
 				"9"
 			],
@@ -11,6 +44,9 @@
 			],
 			"stages": [
 				"2"
+			],
+			"competencies": [
+				"http"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
@@ -30,8 +66,10 @@
 				"http"
 			],
 			"stages": [
-				"1",
 				"2"
+			],
+			"competencies": [
+				"http"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
@@ -53,8 +91,10 @@
 				"10"
 			],
 			"stages": [
-				"1",
 				"2"
+			],
+			"competencies": [
+				"http"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
@@ -65,6 +105,66 @@
 	},
 	{
 		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"isRemoteOk": false,
+			"levels": [
+				"9",
+				"10"
+			],
+			"tags": [
+				"css",
+				"box",
+				"padding",
+				"border"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"html/css"
+			],
+			"isPublished": true,
+			"isMultiPart": false,
+			"citations": [
+				"https://css-tricks.com/interview-questions-css/"
+			],
+			"file": "questions/css-box-model.md"
+		},
+		"body": "<h3>What is the <code>Box Model</code> in CSS? Which properties are a part of it?</h3>\n",
+		"notes": "<p>The CSS box model is fundamental to understanding layout and sizing and such. It's made up of:</p>\n<ul>\n<li>Width and height (or in the absence of that, default values and the content inside)</li>\n<li>Padding</li>\n<li>Border</li>\n</ul>\n<p>Margin is related but not technically a part of it. I would give extra points for knowing/mentioning that, but not take away and points for including it.</p>\n"
+	},
+	{
+		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"isRemoteOk": false,
+			"levels": [
+				"9",
+				"10"
+			],
+			"tags": [
+				"css",
+				"selectors",
+				"role",
+				"mailto"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"html/css"
+			],
+			"isPublished": true,
+			"isMultiPart": true,
+			"citations": [
+				null
+			],
+			"file": "questions/css-selector-explain.md"
+		},
+		"body": "<h3>What's going on in this CSS selector?</h3>\n<pre><code class=\"language-css\"><span class=\"hljs-attr_selector\">[role=navigation]</span> &gt; <span class=\"hljs-tag\">ul</span> <span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\"><span class=\"hljs-function\">not</span>([href^=mailto]) {\n\n}\n</span></span></code></pre>\n",
+		"notes": "<p>This selects anchor links that are not email links that are decedents of an unordered list that is the direct child of any element with a role attribute of 'navigation'.</p>\n<p>Being able to verbalize a selector is proof you understand them and evidence they can communicate complex tech subjects.</p>\n"
+	},
+	{
+		"meta": {
 			"author": "Jacob Larson <jacob.j.larson@accenture.com>",
 			"isRemoteOk": false,
 			"levels": [
@@ -72,16 +172,46 @@
 				"10"
 			],
 			"tags": [
-				"css"
+				"css",
+				"selectors"
 			],
 			"stages": [
 				"2"
+			],
+			"competencies": [
+				"html/css"
 			],
 			"isPublished": true,
 			"file": "questions/css-selectors.md"
 		},
 		"body": "<h3>What elements would be targetted by the following CSS selectors?</h3>\n<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n\n* {}\n</span></span></code></pre>\n",
 		"notes": "<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* An element whose ID is `container` */</span> \n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose CLASS is `container` */</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Either `h1` or `h2` elements with a CLASS of `error` */</span> \n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with BOTH `message` and `success` classes */</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose `type` attribute is `text` */</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with a `href` attribute */</span> \n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DIRECT DECENDANT of `container` */</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DECENDANT of `container` */</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n<span class=\"hljs-comment\">/* An anchor with PSUEDO CLASS of HOVER (mouseover) */</span> \n\n* {}\n<span class=\"hljs-comment\">/* Anything/Everything (wildcard) */</span> \n</span></span></code></pre>\n"
+	},
+	{
+		"meta": {
+			"author": "Jacob Larson <jacob.j.larson@accenture.com>",
+			"isRemoteOk": false,
+			"levels": [
+				"9",
+				"10"
+			],
+			"tags": [
+				"css",
+				"specificity",
+				"selectors"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"html/css"
+			],
+			"isPublished": true,
+			"isMultiPart": true,
+			"file": "questions/css.specificity.md"
+		},
+		"body": "<h3>CSS Specificity</h3>\n<p>A few questions about CSS specificity (refer to the following markup)</p>\n<pre><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"container\"</span>&gt;</span>\n\n  <span class=\"hljs-comment\">&lt;!-- paragraphs --&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"my-class\"</span>&gt;</span>I am a paragraph<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span>&gt;</span>I'm a paragraph too<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n\n  <span class=\"hljs-comment\">&lt;!-- unordered lists --&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"list\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Foo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Bar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Bizz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Buzz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n</code></pre>\n<h4>What is <code>specificity</code>?</h4>\n<p> </p>\n<h4>Wat alkjasdlkfj lasdjf lkasdjf</h4>\n<pre><code class=\"language-css\"><span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> red</span></span>;\n}</span>\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-tag\">p</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> blue</span></span>;\n}</span>\n<span class=\"hljs-class\">.alpha</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> yellow</span></span>;\n}</span>\n\n</code></pre>\n",
+		"notes": "<h4>What is CSS <code>specificity</code>?</h4>\n<p>CSS <code>specificity</code> determines the application of</p>\n<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* An element whose ID is `container` */</span> \n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose CLASS is `container` */</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Either `h1` or `h2` elements with a CLASS of `error` */</span> \n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with BOTH `message` and `success` classes */</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose `type` attribute is `text` */</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with a `href` attribute */</span> \n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DIRECT DECENDANT of `container` */</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DECENDANT of `container` */</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n<span class=\"hljs-comment\">/* An anchor with PSUEDO CLASS of HOVER (mouseover) */</span> \n\n* {}\n<span class=\"hljs-comment\">/* Anything/Everything (wildcard) */</span> \n</span></span></code></pre>\n"
 	},
 	{
 		"meta": {
@@ -97,6 +227,9 @@
 			],
 			"stages": [
 				"2"
+			],
+			"competencies": [
+				"integration"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
@@ -146,6 +279,9 @@
 				"1",
 				"2"
 			],
+			"competencies": [
+				"http"
+			],
 			"isRemoteOk": true,
 			"isPublished": false,
 			"file": "questions/dns.md"
@@ -187,11 +323,38 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"integration"
+			],
 			"isRemoteOk": true,
 			"isPublished": false,
 			"file": "questions/eventual-consistency.md"
 		},
 		"body": "<h3>What is &quot;eventual consistency&quot;?</h3>\n",
+		"notes": "<p>@todo</p>\n"
+	},
+	{
+		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"levels": [
+				"9",
+				"7"
+			],
+			"tags": [
+				"spdy",
+				"http"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"http"
+			],
+			"isRemoteOk": true,
+			"isPublished": false,
+			"file": "questions/http-vs-http2-spdy.md"
+		},
+		"body": "<h3>What are some benefits of HTTP2 (or SPDY)?</h3>\n",
 		"notes": "<p>@todo</p>\n"
 	},
 	{
@@ -213,6 +376,9 @@
 			],
 			"stages": [
 				"2"
+			],
+			"competencies": [
+				"js"
 			],
 			"isRemoteOk": false,
 			"isPublished": true,
@@ -239,6 +405,9 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"js"
+			],
 			"isPublished": true,
 			"file": "questions/js.array-length.md"
 		},
@@ -262,11 +431,14 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"architecture"
+			],
 			"isRemoteOk": true,
 			"isPublished": false,
 			"file": "questions/js.closures-vs-prototypes.md"
 		},
-		"body": "<h3>What are the tradeoffs between closures and prototypes in JavaScript?</h3>\n",
+		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
 		"notes": "<p>@todo</p>\n"
 	},
 	{
@@ -291,12 +463,15 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"js"
+			],
 			"isRemoteOk": false,
 			"isPublished": true,
 			"isMultiPart": true,
 			"file": "questions/js.dashy.md"
 		},
-		"body": "<h3>Dashy</h3>\n<p> </p>\n<h4>Explain the following javascript snippet</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> str.split(<span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">'-'</span>);\n}\n\ndashy(<span class=\"hljs-string\">'hello'</span>); <span class=\"hljs-comment\">// &lt;= ???</span>\n</code></pre>\n<p> </p>\n<h4>How is the following implementation different?</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">String</span>.prototype.split.call(str, <span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">''</span>);\n}\n</code></pre>\n<p> </p>\n<h4>Implement a <code>dashy</code> for all instances of String</h4>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> awesome = <span class=\"hljs-string\">'Acquity'</span>;\nawesome.dashy(); <span class=\"hljs-comment\">// &lt;= 'A-c-q-u-i-t-y'</span>\n</code></pre>\n<p> </p>\n<h4>Why should you <em>avoid</em> patching native prototypes (like <code>String</code>'s)?</h4>\n<p> </p>\n",
+		"body": "<h3>Dashy</h3>\n<p>aslkdfjasdf</p>\n<h4>Explain the following javascript snippet</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> str.split(<span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">'-'</span>);\n}\n\ndashy(<span class=\"hljs-string\">'hello'</span>); <span class=\"hljs-comment\">// &lt;= ???</span>\n</code></pre>\n<h4>How is the following implementation different?</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">String</span>.prototype.split.call(str, <span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">''</span>);\n}\n</code></pre>\n<h4>Implement a <code>dashy</code> for all instances of String</h4>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> awesome = <span class=\"hljs-string\">'Acquity'</span>;\nawesome.dashy(); <span class=\"hljs-comment\">// &lt;= 'A-c-q-u-i-t-y'</span>\n</code></pre>\n<h4>Why should you <em>avoid</em> patching native prototypes (like <code>String</code>'s)?</h4>\n",
 		"notes": "<p>duh....</p>\n"
 	},
 	{
@@ -313,6 +488,9 @@
 				"recursion",
 				"recurse",
 				"fibonacci"
+			],
+			"competencies": [
+				"js"
 			],
 			"isRemoteOk": false,
 			"isPublished": false,
@@ -338,6 +516,9 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"js"
+			],
 			"isRemoteOk": false,
 			"isPublished": false,
 			"file": "questions/js.function-composition.md"
@@ -360,6 +541,9 @@
 				"1",
 				"2"
 			],
+			"competencies": [
+				"js"
+			],
 			"isRemoteOk": true,
 			"isPublished": false,
 			"file": "questions/js.hoisting.md"
@@ -381,6 +565,9 @@
 			"stages": [
 				"1",
 				"2"
+			],
+			"competencies": [
+				"js"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
@@ -408,6 +595,9 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"js"
+			],
 			"isRemoteOk": false,
 			"isPublished": false,
 			"isMultiPart": true,
@@ -434,6 +624,10 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"html/css",
+				"js"
+			],
 			"isRemoteOk": false,
 			"isPublished": false,
 			"isMultiPart": true,
@@ -454,6 +648,9 @@
 				"js",
 				"reverse",
 				"yoda"
+			],
+			"competencies": [
+				"js"
 			],
 			"isRemoteOk": false,
 			"isPublished": false,
@@ -484,6 +681,9 @@
 			"stages": [
 				"2"
 			],
+			"competencies": [
+				"js"
+			],
 			"file": "questions/js.slice-vs-splice.md"
 		},
 		"body": "<h3>What is the difference between <code>splice</code> and <code>slice</code>?</h3>\n<p>The value returned from both methods is equivalent. So how are they different?</p>\n<pre><code class=\"language-javascript\">[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].slice(<span class=\"hljs-number\">1</span>)   <span class=\"hljs-comment\">// &lt;= returns [ 2, 3 ]</span>\n[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].splice(<span class=\"hljs-number\">1</span>)  <span class=\"hljs-comment\">// &lt;= returns [ 2, 3 ]</span>\n</code></pre>\n",
@@ -501,12 +701,94 @@
 				"js",
 				"strict"
 			],
+			"competencies": [
+				"js"
+			],
 			"isRemoteOk": true,
 			"isPublished": false,
 			"stages": [],
 			"file": "questions/js.strict.md"
 		},
 		"body": "<h3>What is <code>strict</code> mode? Why does it exist?</h3>\n",
+		"notes": "<p>@todo</p>\n"
+	},
+	{
+		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"levels": [
+				"7"
+			],
+			"tags": [
+				"coupling",
+				"coupled",
+				"loose",
+				"design"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"architecture"
+			],
+			"isRemoteOk": true,
+			"isPublished": false,
+			"file": "questions/loose-coupling.md"
+		},
+		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
+		"notes": "<p>@todo</p>\n"
+	},
+	{
+		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"levels": [
+				"7"
+			],
+			"tags": [
+				"javascript",
+				"js",
+				"oop",
+				"object oriented",
+				"closure",
+				"prototype"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"architecture"
+			],
+			"isRemoteOk": true,
+			"isPublished": false,
+			"file": "questions/polymorphism.md"
+		},
+		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
+		"notes": "<p>@todo</p>\n"
+	},
+	{
+		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"levels": [
+				"7"
+			],
+			"tags": [
+				"javascript",
+				"js",
+				"oop",
+				"object oriented",
+				"closure",
+				"prototype"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"architecture"
+			],
+			"isRemoteOk": true,
+			"isPublished": false,
+			"file": "questions/pub-sub.md"
+		},
+		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
 		"notes": "<p>@todo</p>\n"
 	},
 	{
@@ -522,6 +804,9 @@
 			],
 			"stages": [
 				"2"
+			],
+			"competencies": [
+				"architecture"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
@@ -550,9 +835,41 @@
 				"9",
 				"7"
 			],
+			"competencies": [
+				"integration"
+			],
 			"file": "questions/rest-api.md"
 		},
 		"body": "<h3>REST Web APIs</h3>\n<p>Compose a request (psuedo-curl) for the following:</p>\n<h4>Given a RESTful resource <code>users</code>, retrieve all <code>users</code> with the name <code>waldo</code>:</h4>\n<p> </p>\n<h4>Change Waldo's <code>wearsGlasses</code> property to false given the following <code>user</code> data structure:</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// response</span>\n{\n    _id: <span class=\"hljs-string\">\"abc123\"</span>,\n    name: <span class=\"hljs-string\">\"waldo\"</span>,\n    wearsGlasses: <span class=\"hljs-literal\">true</span>\n}\n</code></pre>\n",
 		"notes": "<h4>Retrieve Users</h4>\n<pre><code class=\"language-http\">// Retrieve all users named \"waldo\"\nGET /users?name=waldo\n</code></pre>\n<h4>Update Waldo</h4>\n<p>Change Waldo's <code>wearsGlasses</code> property to false:</p>\n<pre><code class=\"language-http\">PUT /users/abc123\n{\n  \"_id\": \"abc123\",\n  \"name\": \"waldo\",\n  \"wearsGlasses\": false\n}\n</code></pre>\n<p><em>or</em></p>\n<pre><code class=\"language-http\">PATCH /users/abc123\n{\n  \"wearsGlasses\": false\n}\n</code></pre>\n"
+	},
+	{
+		"meta": {
+			"author": "Danny Eck <daniel.eck@accenture.com>",
+			"isRemoteOk": false,
+			"levels": [
+				"9",
+				"10"
+			],
+			"tags": [
+				"css",
+				"image",
+				"sprites"
+			],
+			"stages": [
+				"2"
+			],
+			"competencies": [
+				"html/css"
+			],
+			"isPublished": true,
+			"isMultiPart": true,
+			"citations": [
+				"https://css-tricks.com/interview-questions-css/"
+			],
+			"file": "questions/sprites.md"
+		},
+		"body": "<h3>Image Sprites</h3>\n<h4>What are sprites and why would use them?</h4>\n<h4>How do you go about creating them?</h4>\n<h4>What are possible alternatives to sprites?</h4>\n",
+		"notes": "<h4>What are they?</h4>\n<p>Sprites are essentially multiple images combined into one. Performance is the reason that they are used. Generally speaking, the slowest thing a website can do is request a resource. The fewer requests a site needs to make, the faster it is. Fast = good. Combining what would be many requests into one = good.</p>\n<h4>How to create?</h4>\n<p>Asking how they make sprites would just seal the deal that they are actually very familiar with them. Manually creating sprites is certainly a possibility but it isn't very efficent. There are helper tools like SpriteCow and SpriteMe, Spriting with Compass, or Grunticon. It's always interesting to hear a real workflow approach.</p>\n<h4>Alternatives</h4>\n<p>Sprites are raster images. When asking about alternatives, good answers might be related to the fact that sprites are often for icons and icons often don't need to be raster. SVG Stacks, Icon Fonts, Unicode...</p>\n"
 	}
 ]

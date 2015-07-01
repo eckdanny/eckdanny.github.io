@@ -1,160 +1,267 @@
+<!--
+<div class="container-fluid">
+  <div class="row text-center">
+    <div
+      ng-repeat="d in vm.ds"
+      style="display: inline-block;"
+    >
+      <ag:radar:chart
+        chart-data="d"
+      ></ag:radar:chart>
+    </div>
+  </div>
+</div>
+-->
+
 <div class="container-fluid">
   <div class="row">
 
     <div
       class="col-md-4 col-md-push-8"
       role="complementary"
+      style="
+        position: fixed;
+        background-color: rgb(148, 205, 135);
+        overflow-y: scroll;
+        top: 90px;
+        padding-top: 10px;
+        bottom: 0;
+      "
     >
 
-      <form
-        id="ag-search-form"
-        class="card-2"
-      >
-        <div class="row">
+      <div class="panel card-2">
+        timer
+      </div>
 
-        <div class="col-md-12 hidden-xs hidden-sm text-center">
-          <label class="title"><i
-            class="glyphicon glyphicon-search"
-          ></i>
-          FINDER</label>
-          <span
-            class="label label-success"
-            ng-bind="ds.length"
-            style="
-              position: absolute;
-              z-index: 999;
-              right: 10px;
-              text-align: right;
-              top: 4px;
-            "
-          ></span>
-        </div>
+      <div class="panel card-2">
+        <form
+          id="ag-search-form"
+        >
+          <div class="row">
 
-          <div class="col-sm-12">
-            <div class="form-group clearfix">
-              <label
-                for="search"
-                class="control-label hidden"
-                ng-bind="'Search'"
-              ></label>
-              <input
-                type="text"
-                class="form-control pull-right"
-                id="search"
-                placeholder="Search..."
-                ng-model="vm.search.meta.tags"
+            <div class="col-md-12 hidden-xs hidden-sm text-center">
+              <label class="title"><i
+                class="glyphicon glyphicon-search"
+              ></i>
+              FINDER</label>
+              <span
+                class="label label-success"
+                ng-bind="ds.length"
                 style="
-                  border-radius: 0;
+                  position: absolute;
+                  z-index: 999;
+                  right: 10px;
+                  text-align: right;
+                  top: 4px;
                 "
-              >
+              ></span>
             </div>
-          </div>
 
-          <div class="col-md-12 col-sm-3">
-            <div class="form-horizontal form-group">
-              <label class="control-label">Level</label>
-              <div class="btn-group pull-right">
+            <!-- Search -->
+            <div class="col-sm-12">
+              <div class="form-group clearfix">
                 <label
-                  class="btn btn-default"
-                  ng-model="vm.query.meta.levels[10]"
-                  btn-checkbox
-                  ng-bind="'10'"
+                  for="search"
+                  class="control-label hidden"
+                  ng-bind="'Search'"
                 ></label>
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.query.meta.levels[9]"
-                  btn-checkbox
-                  ng-bind="'9'"
-                ></label>
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.query.meta.levels[7]"
-                  btn-checkbox
-                  ng-bind="'7'"
-                ></label>
+                <input
+                  type="text"
+                  class="form-control pull-right"
+                  id="search"
+                  placeholder="Search..."
+                  ng-model="vm.search.meta.tags"
+                  style="
+                    border-radius: 0;
+                  "
+                >
               </div>
             </div>
-          </div>
 
-          <div class="col-sm-5 col-md-12">
-            <div class="form-horizontal form-group">
-              <label class="control-label">Stage</label>
-              <div class="btn-group pull-right">
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.query.meta.stages[1]"
-                  btn-checkbox
-                  ng-bind="'Screen'"
-                ></label>
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.query.meta.stages[2]"
-                  btn-checkbox
-                  ng-bind="'Technical'"
-                ></label>
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.query.meta.stages[3]"
-                  btn-checkbox
-                  ng-bind="'Manager'"
-                ></label>
+            <p class="clearfix">
+              <button
+                type="button"
+                class="btn btn-xs btn-default pull-right"
+                ng-click="isVisibleAdvancedSearch = !isVisibleAdvancedSearch"
+                ng-bind="::'Advanced Search'"
+              ></button>
+            </p>
+
+            <!-- Advanced Search -->
+            <div ng-show="!!isVisibleAdvancedSearch">
+              <div class="col-md-12 col-sm-3">
+                <div class="form-horizontal form-group">
+                  <label class="control-label">Level</label>
+                  <div class="btn-group pull-right">
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.query.meta.levels[11]"
+                      btn-checkbox
+                      ng-bind="'11'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.query.meta.levels[10]"
+                      btn-checkbox
+                      ng-bind="'10'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.query.meta.levels[9]"
+                      btn-checkbox
+                      ng-bind="'9'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.query.meta.levels[7]"
+                      btn-checkbox
+                      ng-bind="'7'"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-5 col-md-12">
+                <div class="form-horizontal form-group">
+                  <label class="control-label">Stage</label>
+                  <div class="btn-group pull-right">
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.query.meta.stages[1]"
+                      btn-checkbox
+                      ng-bind="'Screen'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.query.meta.stages[2]"
+                      btn-checkbox
+                      ng-bind="'Technical'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.query.meta.stages[3]"
+                      btn-checkbox
+                      ng-bind="'Manager'"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 col-md-12">
+                <div class="form-horizontal form-group">
+                <label class="control-label">Restrictions</label>
+                  <div class="btn-group pull-right">
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.search.meta.isRemoteOk"
+                      btn-radio="true"
+                      ng-bind="'Phone OK'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.search.meta.isRemoteOk"
+                      btn-radio="undefined"
+                      ng-bind="'All'"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 col-md-12">
+                <div class="form-horizontal form-group">
+                <label class="control-label">Published</label>
+                  <div class="btn-group pull-right">
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.search.meta.isPublished"
+                      btn-radio="true"
+                      ng-bind="'Yes'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.search.meta.isPublished"
+                      btn-radio="undefined"
+                      ng-bind="'All'"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 col-md-12">
+                <div class="form-horizontal form-group">
+                <label class="control-label">Hide Asked</label>
+                  <div class="btn-group pull-right">
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.search.meta.isPublished"
+                      btn-radio="true"
+                      ng-bind="'Yes'"
+                    ></label>
+                    <label
+                      class="btn btn-sm btn-default"
+                      ng-model="vm.search.meta.isPublished"
+                      btn-radio="undefined"
+                      ng-bind="'All'"
+                    ></label>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-sm-4 col-md-12">
-            <div class="form-horizontal form-group">
-            <label class="control-label">Restrictions</label>
-              <div class="btn-group pull-right">
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.search.meta.isRemoteOk"
-                  btn-radio="true"
-                  ng-bind="'Phone OK'"
-                ></label>
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.search.meta.isRemoteOk"
-                  btn-radio="undefined"
-                  ng-bind="'All'"
-                ></label>
-              </div>
-            </div>
           </div>
+        </form>
+      </div>
 
-          <div class="col-sm-4 col-md-12">
-            <div class="form-horizontal form-group">
-            <label class="control-label">Published</label>
-              <div class="btn-group pull-right">
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.search.meta.isPublished"
-                  btn-radio="true"
-                  ng-bind="'Yes'"
-                ></label>
-                <label
-                  class="btn btn-default"
-                  ng-model="vm.search.meta.isPublished"
-                  btn-radio="undefined"
-                  ng-bind="'All'"
-                ></label>
-              </div>
-            </div>
+      <div class="panel card-2" ng-init="isReadonly = true; rate=4;">
+        <h4 class="text-center">Category Quota</h4>
+        <div class="row">
+          <div class="col-md-6">
+            HTML/CSS
           </div>
-
+          <div class="col-md-6">
+            <rating
+              ng-model="rate"
+              max="5"
+              readonly="isReadonly"
+              state-on="'glyphicon-check'"
+              state-off="'glyphicon-unchecked'"
+            ></rating>
+          </div>
         </div>
-      </form>
+      </div>
+
+      <div class="panel text-center card-2">
+        <h4>Skills Assessment</h4>
+        <ag:radar:chart
+          chart-data="vm.report"
+        ></ag:radar:chart>
+      </div>
+
+      <div class="panel text-center card-2">
+        <h4>Category Quota</h4>
+        <ag:bar:chart
+          chart-data="vm.quota"
+        ></ag:bar:chart>
+      </div>
 
     </div>
 
-    <div class="col-md-8 col-md-pull-4">
+    <div class="col-md-8">
+
+
+      <!-- <pre ng-bind="vm.feedbackStore.fetch | json"></pre> -->
+      <!-- <button ng-click="vm.generateReport()">report</button> -->
+
 
       <div
         ng-repeat="d in ds = (vm.questionsFiltered | filter:vm.search)"
         class="question card-1"
+        ng-class="{
+          'has-feedback': !!vm.feedbackStore.fetch(d._id)
+        }"
         style="
           margin-bottom: 10px;
-          padding: 10px;
+          padding: 10px 20px;
         "
       >
         <span
@@ -165,32 +272,123 @@
         </span>
         <div hljs ng-bind-html="::d.body" class="body"></div>
         <div>
-          <a href="#">
-            <h4
-              ng-if="d.notes"
-              ng-click="d.isVisibleNotes = !d.isVisibleNotes"
-              ng-bind="'Notes'"
-              class="text-danger"
-            ></h4>
-          </a>
-          <div
-            class="notes"
-            ng-show="d.isVisibleNotes"
-            hljs
-            ng-bind-html="::d.notes"
-          ></div>
-          <div
-            ng-show="d.isVisibleNotes"
-            class="clearfix"
-          >
+
+          <hr>
+
+          <!-- <pre ng-bind="::d.meta.competencies | json"></pre> -->
+
+          <div class="form-group">
+            <div class="btn-group">
+              <label
+                class="btn btn-default btn-sm"
+                ng-model="radioModel"
+                btn-radio="'notes'"
+                uncheckable
+                ng:bind="::'Notes'"
+              ></label>
+              <label
+                class="btn btn-default btn-sm"
+                ng-model="radioModel"
+                btn-radio="'feedback'"
+                uncheckable
+                ng:bind="::'Feedback'"
+              ></label>
+            </div>
+
             <span
               class="label label-info pull-right"
+              style="margin-top: 7px;"
             >
             <i class="glyphicon glyphicon-file"></i>
             <tt ng-bind="::d.meta.file"></tt></span>
           </div>
+
+          <div
+            class="notes"
+            ng-show="'notes' === radioModel"
+            hljs
+            ng-bind-html="::d.notes"
+          ></div>
+
+          <div
+            class="feedback"
+            ng-show="'feedback' === radioModel"
+          >
+            <!-- <pre ng-bind="vm.feedbackStore.fetch(d._id) | json"></pre> -->
+
+            <form
+              ng-submit="
+                feedback['_questionId'] = d._id;
+                vm.feedbackStore.save(feedback, d._id);
+                radioModel = '';
+                vm.generateReport();
+              "
+              ng-init="feedback = vm.feedbackStore.fetch(d._id) || {};"
+            >
+
+              <div
+                class="form-group"
+                ng-repeat="competency in d.meta.competencies"
+              >
+                <label
+                  ng-bind="::competency"
+                  style="
+                    text-transform: uppercase;
+                    min-width: 100px;
+                  "
+                ></label>
+
+                <label
+                  ng-repeat="i in [0,1,2,3,4]"
+                  class="radio-inline"
+                >
+                  <input
+                    type="radio"
+                    ng-model="feedback.competencies[competency]"
+                    ng-value="i"
+                  >
+                  <div ng-bind="::i+1"></div>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  ng-model="feedback.general"
+                  class="form-control"
+                  rows="3"
+                  style="
+                    resize: vertical;
+                  "
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-sm btn-success"
+                ng-bind="::'Save'"
+              ></button>
+              <button
+                type="button"
+                class="btn btn-sm btn-info"
+                ng-bind="::'Undo'"
+              ></button>
+              <button
+                type="button"
+                ng-click="
+                  vm.feedbackStore.destroy(d._id);
+                  feedback = {};
+                  radioModel = '';
+                "
+                class="btn btn-sm btn-danger"
+                ng-bind="::'Remove'"
+              ></button>
+            </form>
+
+          </div>
+
         </div>
-      </div>
+
+      </div> <!-- /repeater -->
       <alert ng-if="!ds.length">No Results</alert>
 
     </div>
