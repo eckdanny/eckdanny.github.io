@@ -14,7 +14,8 @@
 				"element",
 				"block",
 				"inline",
-				"inline-block"
+				"inline-block",
+				"html/css"
 			],
 			"stages": [
 				"2"
@@ -27,7 +28,8 @@
 			"citations": [
 				"https://css-tricks.com/interview-questions-css/"
 			],
-			"file": "questions/block-vs-inline-block-vs-inline.md"
+			"file": "questions/block-vs-inline-block-vs-inline.md",
+			"title": "What is the difference between inline, inline-block, and block?"
 		},
 		"body": "<h3>What is the difference between inline, inline-block, and block?</h3>\n",
 		"notes": "<p>Bonus points for bringing up specific details like the fact that you can't transform inline elements.</p>\n"
@@ -50,7 +52,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/browser-http-request.md"
+			"file": "questions/browser-http-request.md",
+			"title": "What is the lifecycle of a browser HTTP request?"
 		},
 		"body": "<h3>What is the lifecycle of a browser HTTP request?</h3>\n",
 		"notes": "<ul>\n<li>Browser resolves server's host name</li>\n<li>Browser sends the request to the server</li>\n<li>Request terminal HTTPS/SPDY</li>\n<li>HTTP-level caching</li>\n<li>HAProxy load balances the traffic</li>\n<li>Web server receives the request and passes control to application code</li>\n<li>Application prepares a response</li>\n<li>Response goes through previous layers back to the browser</li>\n</ul>\n"
@@ -73,7 +76,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/cors.md"
+			"file": "questions/cors.md",
+			"title": "What is CORS? How does it work?"
 		},
 		"body": "<h3>What is CORS? How does it work?</h3>\n",
 		"notes": "<p>Cross-origin resource sharing (CORS) is a mechanism that allows many resources (e.g., fonts, JavaScript, etc.) on a web page to be requested from another domain outside the domain from which the resource originated. It’s a mechanism supported in HTML5 that manages <code>XMLHttpRequest</code> access to a domain different.</p>\n<p>CORS adds new HTTP headers that provide access to permitted origin domains. For HTTP methods other than GET (or POST with certain MIME types), the specification mandates that browsers first use an HTTP OPTIONS request header to solicit a list of supported (and available) methods from the server. The actual request can then be submitted. Servers can also notify clients whether “credentials” (including Cookies and HTTP Authentication data) should be sent with requests.</p>\n"
@@ -98,7 +102,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/crud-http.md"
+			"file": "questions/crud-http.md",
+			"title": "What is CRUD? How do CRUD operations map to HTTP verbs in RESTful web API?"
 		},
 		"body": "<h3>What is CRUD? How do CRUD operations map to HTTP verbs in RESTful web API?</h3>\n",
 		"notes": "<pre><code class=\"language-haml\">Method      HTTP Verb\n-<span class=\"ruby\">-------------------------\n</span>Create      POST\nRead        GET\nUpdate      PUT (or PATCH)\nDelete      DELETE\n</code></pre>\n"
@@ -115,7 +120,8 @@
 				"css",
 				"box",
 				"padding",
-				"border"
+				"border",
+				"html/css"
 			],
 			"stages": [
 				"2"
@@ -128,7 +134,8 @@
 			"citations": [
 				"https://css-tricks.com/interview-questions-css/"
 			],
-			"file": "questions/css-box-model.md"
+			"file": "questions/css-box-model.md",
+			"title": "What is the Box Model in CSS? Which properties are a part of it?"
 		},
 		"body": "<h3>What is the <code>Box Model</code> in CSS? Which properties are a part of it?</h3>\n",
 		"notes": "<p>The CSS box model is fundamental to understanding layout and sizing and such. It's made up of:</p>\n<ul>\n<li>Width and height (or in the absence of that, default values and the content inside)</li>\n<li>Padding</li>\n<li>Border</li>\n</ul>\n<p>Margin is related but not technically a part of it. I would give extra points for knowing/mentioning that, but not take away and points for including it.</p>\n"
@@ -145,7 +152,8 @@
 				"css",
 				"selectors",
 				"role",
-				"mailto"
+				"mailto",
+				"html/css"
 			],
 			"stages": [
 				"2"
@@ -158,7 +166,8 @@
 			"citations": [
 				null
 			],
-			"file": "questions/css-selector-explain.md"
+			"file": "questions/css-selector-explain.md",
+			"title": "What's going on in this CSS selector?"
 		},
 		"body": "<h3>What's going on in this CSS selector?</h3>\n<pre><code class=\"language-css\"><span class=\"hljs-attr_selector\">[role=navigation]</span> &gt; <span class=\"hljs-tag\">ul</span> <span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\"><span class=\"hljs-function\">not</span>([href^=mailto]) {\n\n}\n</span></span></code></pre>\n",
 		"notes": "<p>This selects anchor links that are not email links that are decedents of an unordered list that is the direct child of any element with a role attribute of 'navigation'.</p>\n<p>Being able to verbalize a selector is proof you understand them and evidence they can communicate complex tech subjects.</p>\n"
@@ -173,7 +182,8 @@
 			],
 			"tags": [
 				"css",
-				"selectors"
+				"selectors",
+				"html/css"
 			],
 			"stages": [
 				"2"
@@ -182,7 +192,8 @@
 				"html/css"
 			],
 			"isPublished": true,
-			"file": "questions/css-selectors.md"
+			"file": "questions/css-selectors.md",
+			"title": "What elements would be targetted by the following CSS selectors?"
 		},
 		"body": "<h3>What elements would be targetted by the following CSS selectors?</h3>\n<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n\n* {}\n</span></span></code></pre>\n",
 		"notes": "<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* An element whose ID is `container` */</span> \n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose CLASS is `container` */</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Either `h1` or `h2` elements with a CLASS of `error` */</span> \n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with BOTH `message` and `success` classes */</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose `type` attribute is `text` */</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with a `href` attribute */</span> \n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DIRECT DECENDANT of `container` */</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DECENDANT of `container` */</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n<span class=\"hljs-comment\">/* An anchor with PSUEDO CLASS of HOVER (mouseover) */</span> \n\n* {}\n<span class=\"hljs-comment\">/* Anything/Everything (wildcard) */</span> \n</span></span></code></pre>\n"
@@ -198,7 +209,8 @@
 			"tags": [
 				"css",
 				"specificity",
-				"selectors"
+				"selectors",
+				"html/css"
 			],
 			"stages": [
 				"2"
@@ -208,7 +220,8 @@
 			],
 			"isPublished": true,
 			"isMultiPart": true,
-			"file": "questions/css.specificity.md"
+			"file": "questions/css.specificity.md",
+			"title": "CSS Specificity"
 		},
 		"body": "<h3>CSS Specificity</h3>\n<p>A few questions about CSS specificity (refer to the following markup)</p>\n<pre><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">div</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"container\"</span>&gt;</span>\n\n  <span class=\"hljs-comment\">&lt;!-- paragraphs --&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"my-class\"</span>&gt;</span>I am a paragraph<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">p</span>&gt;</span>I'm a paragraph too<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">p</span>&gt;</span>\n\n  <span class=\"hljs-comment\">&lt;!-- unordered lists --&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"list\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Foo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Bar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Bizz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span> <span class=\"hljs-attribute\">class</span>=<span class=\"hljs-value\">\"item\"</span>&gt;</span>Buzz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">div</span>&gt;</span>\n</code></pre>\n<h4>What is <code>specificity</code>?</h4>\n<p> </p>\n<h4>Wat alkjasdlkfj lasdjf lkasdjf</h4>\n<pre><code class=\"language-css\"><span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> red</span></span>;\n}</span>\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-tag\">p</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> blue</span></span>;\n}</span>\n<span class=\"hljs-class\">.alpha</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> yellow</span></span>;\n}</span>\n\n</code></pre>\n",
 		"notes": "<h4>What is CSS <code>specificity</code>?</h4>\n<p>CSS <code>specificity</code> determines the application of</p>\n<pre><code class=\"language-css\"><span class=\"hljs-id\">#container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* An element whose ID is `container` */</span> \n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose CLASS is `container` */</span>\n\n<span class=\"hljs-tag\">h1</span><span class=\"hljs-class\">.error</span>, <span class=\"hljs-tag\">h2</span><span class=\"hljs-class\">.error</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Either `h1` or `h2` elements with a CLASS of `error` */</span> \n\n<span class=\"hljs-class\">.message</span><span class=\"hljs-class\">.success</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with BOTH `message` and `success` classes */</span>\n\n<span class=\"hljs-attr_selector\">[type=text]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element whose `type` attribute is `text` */</span>\n\n<span class=\"hljs-attr_selector\">[href]</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any element with a `href` attribute */</span> \n\n<span class=\"hljs-class\">.container</span> &gt; <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DIRECT DECENDANT of `container` */</span>\n\n<span class=\"hljs-class\">.container</span> <span class=\"hljs-class\">.column</span> <span class=\"hljs-rules\">{}</span>\n<span class=\"hljs-comment\">/* Any `column` class which is a DECENDANT of `container` */</span>\n\n<span class=\"hljs-rule\"><span class=\"hljs-attribute\">a</span>:<span class=\"hljs-value\">hover {}\n<span class=\"hljs-comment\">/* An anchor with PSUEDO CLASS of HOVER (mouseover) */</span> \n\n* {}\n<span class=\"hljs-comment\">/* Anything/Everything (wildcard) */</span> \n</span></span></code></pre>\n"
@@ -223,7 +236,8 @@
 			"tags": [
 				"database",
 				"db",
-				"nosql"
+				"nosql",
+				"integration"
 			],
 			"stages": [
 				"2"
@@ -233,7 +247,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/db.row-col-vs-document.md"
+			"file": "questions/db.row-col-vs-document.md",
+			"title": "Compare and contrast row/column-oriented and document-oriented datastores"
 		},
 		"body": "<h3>Compare and contrast row/column-oriented and document-oriented datastores</h3>\n<p><em>e.g.;</em> How is MongoDB different from MySQL? What about normalization?</p>\n",
 		"notes": "<p>@todo</p>\n"
@@ -259,7 +274,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": true,
-			"file": "questions/dev-tools.md"
+			"file": "questions/dev-tools.md",
+			"title": "What are your favorite development tools?"
 		},
 		"body": "<h3>What are your favorite development tools?</h3>\n",
 		"notes": "<p><strong>Good</strong> responses might include:</p>\n<ul>\n<li>Grunt</li>\n<li>Gulp</li>\n<li>CoffeeScript</li>\n<li>Less</li>\n<li>Sass</li>\n<li>Stylus</li>\n<li>LiveReload, BrowserSync</li>\n</ul>\n<p><strong>Great</strong> responses might include:</p>\n<ul>\n<li>Karma</li>\n<li>Babel</li>\n<li>Tracur</li>\n<li>TypeScript</li>\n<li>Sinon</li>\n<li>Chai</li>\n<li>Mocha</li>\n<li>Jasmine</li>\n<li>Weinre</li>\n</ul>\n"
@@ -284,7 +300,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/dns.md"
+			"file": "questions/dns.md",
+			"title": "What does a DNS server do?"
 		},
 		"body": "<h3>What does a DNS server do?</h3>\n",
 		"notes": "<p>Most prominently, it translates domain names, which can be easily memorized by humans, to the numerical IP addresses needed for the purpose of computer services and devices worldwide. The Domain Name System is an essential component of the functionality of most Internet services because it is the Internet's primary directory service.</p>\n<p>Translates internet names to IP addresses.</p>\n"
@@ -305,7 +322,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/es6-fav-feature.md"
+			"file": "questions/es6-fav-feature.md",
+			"title": "What's your favorite feature of ES6?"
 		},
 		"body": "<h3>What's your favorite feature of ES6?</h3>\n",
 		"notes": "<p>Something like...</p>\n<ul>\n<li>Destructuring</li>\n<li>Native Module Support</li>\n<li>Generators</li>\n<li>Template Literals</li>\n<li>Native Promises</li>\n<li>Spread</li>\n<li>Arrow Function Syntax</li>\n<li>Native Classes</li>\n</ul>\n"
@@ -318,7 +336,8 @@
 			],
 			"tags": [
 				"database",
-				"db"
+				"db",
+				"integration"
 			],
 			"stages": [
 				"2"
@@ -328,7 +347,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/eventual-consistency.md"
+			"file": "questions/eventual-consistency.md",
+			"title": "What is \"eventual consistency\"?"
 		},
 		"body": "<h3>What is &quot;eventual consistency&quot;?</h3>\n",
 		"notes": "<p>@todo</p>\n"
@@ -352,7 +372,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/http-vs-http2-spdy.md"
+			"file": "questions/http-vs-http2-spdy.md",
+			"title": "What are some benefits of HTTP2 (or SPDY)?"
 		},
 		"body": "<h3>What are some benefits of HTTP2 (or SPDY)?</h3>\n",
 		"notes": "<p>@todo</p>\n"
@@ -378,11 +399,12 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": false,
 			"isPublished": true,
-			"file": "questions/js.array-duplicate.md"
+			"file": "questions/js.array-duplicate.md",
+			"title": "Implement an array duplicator function"
 		},
 		"body": "<h3>Implement an array duplicator function</h3>\n<p>Write a function <code>duplicate()</code> which accepts an array and returns a flattened array of two copies.</p>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> inputArr = [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>];\nduplicate(inputArr); <span class=\"hljs-comment\">// &lt;= returns [1, 2, 3, 1, 2, 3]</span>\n\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">duplicate</span>(<span class=\"hljs-params\">arr</span>) </span>{\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
 		"notes": "<p>If the candidate asks whether it is desired to do <code>in-place</code> operations or in <code>side-effect-free</code> way, this is good! Tell them the function should <em>not</em> mutate the input array.</p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// Snarky one-liner</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">duplicate</span>(<span class=\"hljs-params\">arr</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> arr.concat(arr);\n}\n</code></pre>\n<p><em>or</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// using a loop control structure</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">duplicate</span>(<span class=\"hljs-params\">arr</span>) </span>{\n  <span class=\"hljs-keyword\">var</span> i, j, out = [], N = arr.length;\n  <span class=\"hljs-keyword\">for</span> (i=<span class=\"hljs-number\">0</span>; i&lt;<span class=\"hljs-number\">2</span>; i++) {\n    <span class=\"hljs-keyword\">for</span> (j=<span class=\"hljs-number\">0</span>; j&lt;N; j++) {\n      out.push(arr[j]);\n    }\n  }\n  <span class=\"hljs-keyword\">return</span> out;\n}\n</code></pre>\n"
@@ -406,13 +428,15 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isPublished": true,
-			"file": "questions/js.array-length.md"
+			"isMultiPart": true,
+			"file": "questions/js.array-length.md",
+			"title": "Array Fundamentals"
 		},
-		"body": "<h3>Array Fundamentals</h3>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> myArray = [];\nmyArray.push(<span class=\"hljs-number\">1</span>);\nmyArray.push(<span class=\"hljs-number\">2</span>);\n\nmyArray.length; <span class=\"hljs-comment\">// &lt;= ?</span>\n\nmyArray[<span class=\"hljs-number\">2</span>]; <span class=\"hljs-comment\">// &lt;= ?</span>\n</code></pre>\n",
-		"notes": "<p>The <code>length</code> of <code>myArray</code> is <code>2</code>.</p>\n<p>The value <code>myArray[2]</code> is <code>undefined</code>. The candidate should mention that arrays in javascript are <em>zero-indexed</em> (meaning the first element in the array is at position <code>0</code>).</p>\n"
+		"body": "<h3>Array Fundamentals</h3>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> myArray = [];\nmyArray.push(<span class=\"hljs-number\">1</span>);\nmyArray.push(<span class=\"hljs-number\">2</span>);\n</code></pre>\n<h4>What is <code>myArray.length</code>?</h4>\n<h4>What is <code>myArray[2]</code>?</h4>\n<h4>What is <code>myArray.length</code> after the following?</h4>\n<pre><code class=\"language-javascript\">myArray[<span class=\"hljs-number\">99</span>] = <span class=\"hljs-number\">3</span>;\n</code></pre>\n<h4>Explain the following</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> foo = [<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>];\n<span class=\"hljs-keyword\">var</span> bar = foo;\n\n<span class=\"hljs-built_in\">console</span>.log(foo === bar); <span class=\"hljs-comment\">// &lt;== true</span>\n\nfoo.length = <span class=\"hljs-number\">2</span>;\n\n<span class=\"hljs-built_in\">console</span>.log(foo); <span class=\"hljs-comment\">// &lt;== [1,2]</span>\n<span class=\"hljs-built_in\">console</span>.log(bar); <span class=\"hljs-comment\">// &lt;== [1,2]</span>\n\n<span class=\"hljs-built_in\">console</span>.log(foo === bar); <span class=\"hljs-comment\">// &lt;== true</span>\n\nfoo = [<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>];\n\n<span class=\"hljs-built_in\">console</span>.log(foo); <span class=\"hljs-comment\">// &lt;== [1,2]</span>\n<span class=\"hljs-built_in\">console</span>.log(bar); <span class=\"hljs-comment\">// &lt;== [1,2]</span>\n\n<span class=\"hljs-built_in\">console</span>.log(foo === bar); <span class=\"hljs-comment\">// &lt;== false</span>\n\n</code></pre>\n",
+		"notes": "<p>The <code>length</code> of <code>myArray</code> is <code>2</code>.</p>\n<p>The value <code>myArray[2]</code> is <code>undefined</code>. The candidate should mention that arrays in javascript are <em>zero-indexed</em> (meaning the first element in the array is at position <code>0</code>).</p>\n<p>No <code>sparse</code> arrays. Lots of <code>undefined</code>s, and the <code>length</code> is 100.</p>\n<p>Non-primitives are pass-by-reference.</p>\n"
 	},
 	{
 		"meta": {
@@ -426,7 +450,8 @@
 				"oop",
 				"object oriented",
 				"closure",
-				"prototype"
+				"prototype",
+				"architecture"
 			],
 			"stages": [
 				"2"
@@ -436,7 +461,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/js.closures-vs-prototypes.md"
+			"file": "questions/js.closures-vs-prototypes.md",
+			"title": "Compare and Contrast closures and prototypes in JavaScript?"
 		},
 		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
 		"notes": "<p>@todo</p>\n"
@@ -464,12 +490,13 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": false,
 			"isPublished": true,
 			"isMultiPart": true,
-			"file": "questions/js.dashy.md"
+			"file": "questions/js.dashy.md",
+			"title": "Dashy"
 		},
 		"body": "<h3>Dashy</h3>\n<p>aslkdfjasdf</p>\n<h4>Explain the following javascript snippet</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> str.split(<span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">'-'</span>);\n}\n\ndashy(<span class=\"hljs-string\">'hello'</span>); <span class=\"hljs-comment\">// &lt;= ???</span>\n</code></pre>\n<h4>How is the following implementation different?</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">dashy</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">String</span>.prototype.split.call(str, <span class=\"hljs-string\">''</span>).join(<span class=\"hljs-string\">''</span>);\n}\n</code></pre>\n<h4>Implement a <code>dashy</code> for all instances of String</h4>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> awesome = <span class=\"hljs-string\">'Acquity'</span>;\nawesome.dashy(); <span class=\"hljs-comment\">// &lt;= 'A-c-q-u-i-t-y'</span>\n</code></pre>\n<h4>Why should you <em>avoid</em> patching native prototypes (like <code>String</code>'s)?</h4>\n",
 		"notes": "<p>duh....</p>\n"
@@ -490,12 +517,13 @@
 				"fibonacci"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": false,
 			"isPublished": false,
 			"stages": [],
-			"file": "questions/js.fibonacci.md"
+			"file": "questions/js.fibonacci.md",
+			"title": "Implement a fibonacci number generator"
 		},
 		"body": "<h3>Implement a fibonacci number generator</h3>\n<p>Using the Fibonocci integer sequece <code>1, 1, 2, 3, 5, 8, 13, ...</code>, write a function <code>fib(i)</code> which returns the i-th element in the sequence. (The domain is all positive integers).</p>\n<pre><code>fib<span class=\"hljs-params\">(<span class=\"hljs-number\">1</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 1</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">2</span>)</span>:   <span class=\"hljs-comment\">// &lt;= 1</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">3</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 2</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">4</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 3</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">5</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 5</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">6</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 8</span>\nfib<span class=\"hljs-params\">(<span class=\"hljs-number\">7</span>)</span>;   <span class=\"hljs-comment\">// &lt;= 13</span>\n...\n\n<span class=\"hljs-comment\">// Implement Me</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">fib</span><span class=\"hljs-params\">(i)</span> {</span>\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
 		"notes": "<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// A naive but convo-starting implementation</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">fib</span>(<span class=\"hljs-params\">i</span>) </span>{\n  <span class=\"hljs-keyword\">if</span> (i &lt; <span class=\"hljs-number\">3</span>) {\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-number\">1</span>;\n  } <span class=\"hljs-keyword\">else</span> {\n    <span class=\"hljs-keyword\">return</span> fib(i-<span class=\"hljs-number\">2</span>) + fib(i-<span class=\"hljs-number\">1</span>);\n  }\n}\n</code></pre>\n<p>Hint at memoization. Does the candidate grasp the concept? (Or at the very least recursion.) When they are talking it out, do they mention <code>base case</code>?</p>\n"
@@ -517,11 +545,12 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": false,
 			"isPublished": false,
-			"file": "questions/js.function-composition.md"
+			"file": "questions/js.function-composition.md",
+			"title": "Implement a string repeater"
 		},
 		"body": "<h3>Implement a string repeater</h3>\n<p>Implement a function <code>mkRepeater</code> which accepts an interger <code>N</code> and returns a function which repeats a string <code>word</code> <em>N</em> times.</p>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> repeat3 = mkRepeater(<span class=\"hljs-number\">3</span>);\nrepeat3(<span class=\"hljs-string\">'foo'</span>);   <span class=\"hljs-comment\">// &lt;= returns `foofoofoo`</span>\n\nmkRepeater(<span class=\"hljs-number\">5</span>)(<span class=\"hljs-string\">'hi'</span>);  <span class=\"hljs-comment\">// &lt;= returns `hihihihihi`</span>\n\n<span class=\"hljs-comment\">// Implement me</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">mkRepeater</span>(<span class=\"hljs-params\">N</span>) </span>{\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
 		"notes": "<pre><code class=\"language-javascript\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">mkRepeater</span>(<span class=\"hljs-params\">N</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\">word</span>) </span>{ \n    <span class=\"hljs-keyword\">var</span> out = <span class=\"hljs-string\">''</span>, i;\n    <span class=\"hljs-keyword\">for</span> (i=<span class=\"hljs-number\">0</span>; i&lt;N; i++){\n      out += word;\n    }\n    <span class=\"hljs-keyword\">return</span> out;\n  }\n}\n</code></pre>\n"
@@ -542,11 +571,12 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/js.hoisting.md"
+			"file": "questions/js.hoisting.md",
+			"title": "What is hoisting?"
 		},
 		"body": "<h3>What is <code>hoisting</code>?</h3>\n",
 		"notes": "<p>Hoisting is...</p>\n"
@@ -567,11 +597,12 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/js.iife.md"
+			"file": "questions/js.iife.md",
+			"title": "Why use IIFEs?"
 		},
 		"body": "<h3>Why use IIFEs?</h3>\n<p>What are the benefits of using <code>self-invoking anonymous function</code>s (<code>immediately-invoked functional expression</code>s)?</p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// An IIFE</span>\n(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  <span class=\"hljs-comment\">// body...</span>\n})();\n</code></pre>\n",
 		"notes": "<p>Variable scoping, leaks &amp; garbage collection, function purity</p>\n"
@@ -596,15 +627,16 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": false,
 			"isPublished": false,
 			"isMultiPart": true,
-			"file": "questions/js.inheritance.md"
+			"file": "questions/js.inheritance.md",
+			"title": "Explain the following inheritance pattern"
 		},
-		"body": "<h3>asdf</h3>\n<p> </p>\n<h4>Create a <code>Rectangle</code> constructor</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// Implement a Rectangle constructor (psuedo-class)</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Rectangle</span>(<span class=\"hljs-params\">???</span>) </span>{\n  <span class=\"hljs-comment\">// body...</span>\n}\n\n</code></pre>\n<h4>asdfasdf</h4>\n",
-		"notes": "<h4><code>Rectangle</code> constructor</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Implement Rectangle psuedo-class</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Rectangle</span>(<span class=\"hljs-params\">l,w</span>) </span>{\n  <span class=\"hljs-keyword\">this</span>.length = l;\n  <span class=\"hljs-keyword\">this</span>.width  = w;\n}\n\nRectangle.prototype = <span class=\"hljs-built_in\">Object</span>.create(<span class=\"hljs-literal\">null</span>);\nRectangle.prototype.constructor = Rectangle;\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Implement #area (the instance method of Rectangle)</span>\n<span class=\"hljs-comment\">//</span>\nRectangle.prototype.area = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">this</span>.length * <span class=\"hljs-keyword\">this</span>.width;\n}\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Some Rectangle Tests...</span>\n<span class=\"hljs-comment\">//</span>\ndescribe(<span class=\"hljs-string\">'a rectangle'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">var</span> myRect = <span class=\"hljs-keyword\">new</span> Rectangle(<span class=\"hljs-number\">3</span>,<span class=\"hljs-number\">4</span>);\n    it(<span class=\"hljs-string\">'should be an instance of Rectangle'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect <span class=\"hljs-keyword\">instanceof</span> Rectangle).toBe(<span class=\"hljs-literal\">true</span>);\n    });\n    it(<span class=\"hljs-string\">'should have length and width props'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect.length).toEqual(<span class=\"hljs-number\">3</span>);\n        expect(myRect.width).toEqual(<span class=\"hljs-number\">4</span>);\n    });\n    it(<span class=\"hljs-string\">'should have an #area method'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect.area()).toEqual(<span class=\"hljs-number\">12</span>);\n    });\n});\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Implement Square to prototypically inherit from Rectangle</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Square</span>(<span class=\"hljs-params\">l</span>) </span>{\n    Rectangle.call(<span class=\"hljs-keyword\">this</span>, l, l);\n}\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Square Prototype Plumbing</span>\n<span class=\"hljs-comment\">//</span>\nSquare.prototype = <span class=\"hljs-built_in\">Object</span>.create(Rectangle.prototype);\nSquare.prototype.constructor = Square;\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Some Square tests...</span>\n<span class=\"hljs-comment\">//</span>\ndescribe(<span class=\"hljs-string\">'a square'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">var</span> mySquare = <span class=\"hljs-keyword\">new</span> Square(<span class=\"hljs-number\">5</span>);\n    it(<span class=\"hljs-string\">'should be an instance of Square'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(mySquare <span class=\"hljs-keyword\">instanceof</span> Square).toBe(<span class=\"hljs-literal\">true</span>);\n    });\n    it(<span class=\"hljs-string\">'should be an instance of Rectangle'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(mySquare <span class=\"hljs-keyword\">instanceof</span> Rectangle).toBe(<span class=\"hljs-literal\">true</span>);\n    });\n    it(<span class=\"hljs-string\">'should inherit #area'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(mySquare.area()).toBe(<span class=\"hljs-number\">25</span>);\n    });\n});\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// How would you implement a computed property `perimeter`?</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-built_in\">Object</span>.defineProperty(Rectangle.prototype, <span class=\"hljs-string\">'perimeter'</span>, {\n    get: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) </span>{\n        <span class=\"hljs-keyword\">return</span> <span class=\"hljs-number\">2</span> * (<span class=\"hljs-keyword\">this</span>.length + <span class=\"hljs-keyword\">this</span>.width);\n    }\n});\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Perimeter Tests...</span>\n<span class=\"hljs-comment\">//</span>\ndescribe(<span class=\"hljs-string\">'perimeter'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n    <span class=\"hljs-keyword\">var</span> myRect = <span class=\"hljs-keyword\">new</span> Rectangle(<span class=\"hljs-number\">3</span>,<span class=\"hljs-number\">4</span>),\n        mySquare = <span class=\"hljs-keyword\">new</span> Square(<span class=\"hljs-number\">5</span>);\n    it(<span class=\"hljs-string\">'should work'</span>, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n        expect(myRect.perimeter).toEqual(<span class=\"hljs-number\">14</span>);\n        expect(mySquare.perimeter).toEqual(<span class=\"hljs-number\">20</span>);\n    });\n});\n</code></pre>\n"
+		"body": "<h3>Explain the following inheritance pattern</h3>\n<p>Below is a snippet of JavaScript. <em>Explain it!</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Rectangle</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Rectangle</span>(<span class=\"hljs-params\">l,w</span>) </span>{\n  <span class=\"hljs-keyword\">this</span>.length = l;\n  <span class=\"hljs-keyword\">this</span>.width  = w;\n}\n\nRectangle.prototype = <span class=\"hljs-built_in\">Object</span>.create(<span class=\"hljs-literal\">null</span>);\nRectangle.prototype.constructor = Rectangle;\n\nRectangle.prototype.area = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">this</span>.length * <span class=\"hljs-keyword\">this</span>.width;\n}\n\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-comment\">// Square</span>\n<span class=\"hljs-comment\">//</span>\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Square</span>(<span class=\"hljs-params\">l</span>) </span>{\n  Rectangle.call(<span class=\"hljs-keyword\">this</span>, l, l);\n}\n\nSquare.prototype = <span class=\"hljs-built_in\">Object</span>.create(Rectangle.prototype);\nSquare.prototype.constructor = Square;\n\n<span class=\"hljs-built_in\">Object</span>.defineProperty(Rectangle.prototype, <span class=\"hljs-string\">'perimeter'</span>, {\n    get: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) </span>{\n        <span class=\"hljs-keyword\">return</span> <span class=\"hljs-number\">2</span> * (<span class=\"hljs-keyword\">this</span>.length + <span class=\"hljs-keyword\">this</span>.width);\n    }\n});\n</code></pre>\n",
+		"notes": "<p>@todo</p>\n"
 	},
 	{
 		"meta": {
@@ -619,21 +651,23 @@
 				"jquery",
 				"css",
 				"red",
-				"links"
+				"links",
+				"html/css"
 			],
 			"stages": [
 				"2"
 			],
 			"competencies": [
 				"html/css",
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": false,
 			"isPublished": false,
 			"isMultiPart": true,
-			"file": "questions/js.jq.make-ps-red.md"
+			"file": "questions/js.jq.make-ps-red.md",
+			"title": "Set the color of the links red"
 		},
-		"body": "<h3>Set the color of the links red</h3>\n<p>Given the following <code>HTML</code> markup:</p>\n<pre><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"foo\"</span>&gt;</span>Foo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"bar\"</span>&gt;</span>Bar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"bizz\"</span>&gt;</span>Bizz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\n</code></pre>\n<p>Make the links red using:</p>\n<h4>CSS</h4>\n<pre><code><span class=\"hljs-comment\">// Write some CSS...</span>\n</code></pre>\n<h4>JavaScript (jQuery)</h4>\n<pre><code class=\"language-javascript\">$(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  <span class=\"hljs-comment\">// Write some JS...</span>\n})()\n</code></pre>\n",
+		"body": "<h3>Set the color of the links red</h3>\n<p>Given the following <code>HTML</code> markup:</p>\n<pre><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">ul</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"foo\"</span>&gt;</span>Foo<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"bar\"</span>&gt;</span>Bar<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"bizz\"</span>&gt;</span>Bizz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"buzz\"</span>&gt;</span>Buzz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">li</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">a</span> <span class=\"hljs-attribute\">href</span>=<span class=\"hljs-value\">\"bazz\"</span>&gt;</span>Bazz<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">a</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">li</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">ul</span>&gt;</span>\n</code></pre>\n<p>Make the links red using:</p>\n<h4>CSS</h4>\n<pre><code><span class=\"hljs-comment\">// Write some CSS...</span>\n</code></pre>\n<h4>JavaScript (jQuery)</h4>\n<pre><code class=\"language-javascript\">$(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  <span class=\"hljs-comment\">// Write some JS...</span>\n})()\n</code></pre>\n",
 		"notes": "<h4>CSS</h4>\n<pre><code class=\"language-css\"><span class=\"hljs-tag\">a</span> <span class=\"hljs-rules\">{\n  <span class=\"hljs-rule\"><span class=\"hljs-attribute\">color</span>:<span class=\"hljs-value\"> red</span></span>;\n}</span>\n</code></pre>\n<h4>JavaScript (jQuery)</h4>\n<pre><code class=\"language-javascript\">$(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  $(<span class=\"hljs-string\">'a'</span>).css(<span class=\"hljs-string\">'color'</span>, <span class=\"hljs-string\">'red'</span>);\n})();\n</code></pre>\n"
 	},
 	{
@@ -650,14 +684,15 @@
 				"yoda"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": false,
 			"isPublished": false,
 			"stages": [
 				"2"
 			],
-			"file": "questions/js.reverse-words.md"
+			"file": "questions/js.reverse-words.md",
+			"title": "Fundamental Array Manipulations"
 		},
 		"body": "<h3>Fundamental Array Manipulations</h3>\n<p>Write a function <code>duplicate()</code> which accepts an array input and returns 2 copies of the elements.</p>\n<p><em>e.g.;</em></p>\n<pre><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> say = <span class=\"hljs-string\">\"reverse in is yoda speaking\"</span>;\nyodaize(say); <span class=\"hljs-comment\">// Returns 'speaking yoda is in reverse'</span>\n\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">yodaize</span>(<span class=\"hljs-params\">str</span>) </span>{\n  <span class=\"hljs-comment\">// body...</span>\n}\n</code></pre>\n",
 		"notes": "<pre><code class=\"language-javascript\">str.split(<span class=\"hljs-string\">' '</span>).reverse().join(<span class=\"hljs-string\">' '</span>);\n</code></pre>\n"
@@ -682,9 +717,10 @@
 				"2"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
-			"file": "questions/js.slice-vs-splice.md"
+			"file": "questions/js.slice-vs-splice.md",
+			"title": "What is the difference between splice and slice?"
 		},
 		"body": "<h3>What is the difference between <code>splice</code> and <code>slice</code>?</h3>\n<p>The value returned from both methods is equivalent. So how are they different?</p>\n<pre><code class=\"language-javascript\">[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].slice(<span class=\"hljs-number\">1</span>)   <span class=\"hljs-comment\">// &lt;= returns [ 2, 3 ]</span>\n[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>].splice(<span class=\"hljs-number\">1</span>)  <span class=\"hljs-comment\">// &lt;= returns [ 2, 3 ]</span>\n</code></pre>\n",
 		"notes": "<p>Hello World</p>\n<p>Candidate should probably use the words <code>side-effect</code> or <code>immutable</code> here.</p>\n"
@@ -702,12 +738,13 @@
 				"strict"
 			],
 			"competencies": [
-				"js"
+				"javascript"
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
 			"stages": [],
-			"file": "questions/js.strict.md"
+			"file": "questions/js.strict.md",
+			"title": "What is strict mode? Why does it exist?"
 		},
 		"body": "<h3>What is <code>strict</code> mode? Why does it exist?</h3>\n",
 		"notes": "<p>@todo</p>\n"
@@ -722,7 +759,8 @@
 				"coupling",
 				"coupled",
 				"loose",
-				"design"
+				"design",
+				"architecture"
 			],
 			"stages": [
 				"2"
@@ -732,7 +770,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/loose-coupling.md"
+			"file": "questions/loose-coupling.md",
+			"title": "Compare and Contrast closures and prototypes in JavaScript?"
 		},
 		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
 		"notes": "<p>@todo</p>\n"
@@ -749,7 +788,8 @@
 				"oop",
 				"object oriented",
 				"closure",
-				"prototype"
+				"prototype",
+				"architecture"
 			],
 			"stages": [
 				"2"
@@ -759,7 +799,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/polymorphism.md"
+			"file": "questions/polymorphism.md",
+			"title": "Compare and Contrast closures and prototypes in JavaScript?"
 		},
 		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
 		"notes": "<p>@todo</p>\n"
@@ -776,7 +817,8 @@
 				"oop",
 				"object oriented",
 				"closure",
-				"prototype"
+				"prototype",
+				"architecture"
 			],
 			"stages": [
 				"2"
@@ -786,7 +828,8 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/pub-sub.md"
+			"file": "questions/pub-sub.md",
+			"title": "Compare and Contrast closures and prototypes in JavaScript?"
 		},
 		"body": "<h3>Compare and Contrast closures and prototypes in JavaScript?</h3>\n",
 		"notes": "<p>@todo</p>\n"
@@ -800,7 +843,8 @@
 			],
 			"tags": [
 				"responsive",
-				"adaptive"
+				"adaptive",
+				"architecture"
 			],
 			"stages": [
 				"2"
@@ -810,10 +854,14 @@
 			],
 			"isRemoteOk": true,
 			"isPublished": false,
-			"file": "questions/responsive-vs-adaptive.md"
+			"citations": [
+				"https://developer.mozilla.org/en-US/Apps/Design/UI_layout_basics/Responsive_design_versus_adaptive_design"
+			],
+			"file": "questions/responsive-vs-adaptive.md",
+			"title": "Compare and Contrast responsive and adaptive design"
 		},
-		"body": "<h3>Compare/Contrast responsive and adaptive design</h3>\n",
-		"notes": "<p>@todo</p>\n"
+		"body": "<h3>Compare and Contrast responsive and adaptive design</h3>\n",
+		"notes": "<p>Both responsive and adaptive design attempt to optimize the user experience across different devices, adjusting for different viewport sizes, resolutions, usage contexts, control mechanisms, and so on.</p>\n<p>Responsive design works on the principle of flexibility. The idea is that a single fluid design based upon media queries, flexible grids, and responsive images can be used to create a user experience that flexes and changes based on a multitude of factors. The primary benefit is that each user experiences a consistent design. One drawback is a slower load time.</p>\n<p>Adaptive design is more like the modern definition of progressive enhancement. Instead of one flexible design, adaptive design detects the device and other features, and then provides the appropriate feature and layout based on a predefined set of viewport sizes and other characteristics. This can result in a lack of consistency across platforms and devices, but the load time tends to be faster.</p>\n"
 	},
 	{
 		"meta": {
@@ -822,7 +870,8 @@
 				"rest",
 				"http",
 				"waldo",
-				"crud"
+				"crud",
+				"integration"
 			],
 			"stages": [
 				"2"
@@ -838,7 +887,8 @@
 			"competencies": [
 				"integration"
 			],
-			"file": "questions/rest-api.md"
+			"file": "questions/rest-api.md",
+			"title": "REST Web APIs"
 		},
 		"body": "<h3>REST Web APIs</h3>\n<p>Compose a request (psuedo-curl) for the following:</p>\n<h4>Given a RESTful resource <code>users</code>, retrieve all <code>users</code> with the name <code>waldo</code>:</h4>\n<p> </p>\n<h4>Change Waldo's <code>wearsGlasses</code> property to false given the following <code>user</code> data structure:</h4>\n<pre><code class=\"language-javascript\"><span class=\"hljs-comment\">// response</span>\n{\n    _id: <span class=\"hljs-string\">\"abc123\"</span>,\n    name: <span class=\"hljs-string\">\"waldo\"</span>,\n    wearsGlasses: <span class=\"hljs-literal\">true</span>\n}\n</code></pre>\n",
 		"notes": "<h4>Retrieve Users</h4>\n<pre><code class=\"language-http\">// Retrieve all users named \"waldo\"\nGET /users?name=waldo\n</code></pre>\n<h4>Update Waldo</h4>\n<p>Change Waldo's <code>wearsGlasses</code> property to false:</p>\n<pre><code class=\"language-http\">PUT /users/abc123\n{\n  \"_id\": \"abc123\",\n  \"name\": \"waldo\",\n  \"wearsGlasses\": false\n}\n</code></pre>\n<p><em>or</em></p>\n<pre><code class=\"language-http\">PATCH /users/abc123\n{\n  \"wearsGlasses\": false\n}\n</code></pre>\n"
@@ -854,7 +904,8 @@
 			"tags": [
 				"css",
 				"image",
-				"sprites"
+				"sprites",
+				"html/css"
 			],
 			"stages": [
 				"2"
@@ -867,7 +918,8 @@
 			"citations": [
 				"https://css-tricks.com/interview-questions-css/"
 			],
-			"file": "questions/sprites.md"
+			"file": "questions/sprites.md",
+			"title": "Image Sprites"
 		},
 		"body": "<h3>Image Sprites</h3>\n<h4>What are sprites and why would use them?</h4>\n<h4>How do you go about creating them?</h4>\n<h4>What are possible alternatives to sprites?</h4>\n",
 		"notes": "<h4>What are they?</h4>\n<p>Sprites are essentially multiple images combined into one. Performance is the reason that they are used. Generally speaking, the slowest thing a website can do is request a resource. The fewer requests a site needs to make, the faster it is. Fast = good. Combining what would be many requests into one = good.</p>\n<h4>How to create?</h4>\n<p>Asking how they make sprites would just seal the deal that they are actually very familiar with them. Manually creating sprites is certainly a possibility but it isn't very efficent. There are helper tools like SpriteCow and SpriteMe, Spriting with Compass, or Grunticon. It's always interesting to hear a real workflow approach.</p>\n<h4>Alternatives</h4>\n<p>Sprites are raster images. When asking about alternatives, good answers might be related to the fact that sprites are often for icons and icons often don't need to be raster. SVG Stacks, Icon Fonts, Unicode...</p>\n"

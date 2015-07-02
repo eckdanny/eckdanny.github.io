@@ -1,18 +1,3 @@
-<!--
-<div class="container-fluid">
-  <div class="row text-center">
-    <div
-      ng-repeat="d in vm.ds"
-      style="display: inline-block;"
-    >
-      <ag:radar:chart
-        chart-data="d"
-      ></ag:radar:chart>
-    </div>
-  </div>
-</div>
--->
-
 <div class="container-fluid">
   <div class="row">
 
@@ -21,41 +6,27 @@
       role="complementary"
       style="
         position: fixed;
-        background-color: rgb(148, 205, 135);
+        background-color: rgba(93, 93, 93, 0.5);
         overflow-y: scroll;
         top: 90px;
-        padding-top: 10px;
+        padding-top: 20px;
         bottom: 0;
       "
     >
 
-      <div class="panel card-2">
-        timer
-      </div>
-
-      <div class="panel card-2">
-        <form
-          id="ag-search-form"
-        >
+      <div
+        class="panel card-2"
+        style="
+          padding: 10px;
+          padding-bottom: 2px;
+        "
+      >
+        <form>
+          <h4 class="text-center">
+            <i class="fa fa-search"></i>
+            Search Questions
+          </h4>
           <div class="row">
-
-            <div class="col-md-12 hidden-xs hidden-sm text-center">
-              <label class="title"><i
-                class="glyphicon glyphicon-search"
-              ></i>
-              FINDER</label>
-              <span
-                class="label label-success"
-                ng-bind="ds.length"
-                style="
-                  position: absolute;
-                  z-index: 999;
-                  right: 10px;
-                  text-align: right;
-                  top: 4px;
-                "
-              ></span>
-            </div>
 
             <!-- Search -->
             <div class="col-sm-12">
@@ -78,14 +49,28 @@
               </div>
             </div>
 
-            <p class="clearfix">
-              <button
-                type="button"
-                class="btn btn-xs btn-default pull-right"
-                ng-click="isVisibleAdvancedSearch = !isVisibleAdvancedSearch"
-                ng-bind="::'Advanced Search'"
-              ></button>
-            </p>
+            <div class="col-xs-12">
+              <p class="text-right">
+
+                <span
+                  class="label label-success"
+                  ng-bind="ds.length"
+                  style="
+                    right: 10px;
+                    text-align: right;
+                    top: 4px;
+                  "
+                ></span>
+                <button
+                  type="button"
+                  class="btn btn-xs btn-default"
+                  ng-click="isVisibleAdvancedSearch = !isVisibleAdvancedSearch"
+                >
+                  <i class="fa fa-filter"></i>
+                  More
+                </button>
+              </p>
+            </div>
 
             <!-- Advanced Search -->
             <div ng-show="!!isVisibleAdvancedSearch">
@@ -212,46 +197,56 @@
         </form>
       </div>
 
-      <div class="panel card-2" ng-init="isReadonly = true; rate=4;">
-        <h4 class="text-center">Category Quota</h4>
-        <div class="row">
-          <div class="col-md-6">
-            HTML/CSS
+      <div
+        class="panel card-2"
+        style="padding: 10px;"
+        ng-init="isReadonly = true; rate=4;"
+      >
+        <h4 class="text-center">Competency Coverage</h4>
+
+        <div class="row" ng-repeat="coverage in vm.coverage">
+          <div class="col-md-5">
+            <label
+              style="
+                margin-left: 0.75em;
+                margin-top: 1px;
+              "
+            >
+              <a
+                ng-bind="::coverage.label"
+                ng-click="vm.search.meta.tags = coverage.label"
+              ></a>
+            </label>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-7">
             <rating
-              ng-model="rate"
-              max="5"
+              ng-model="coverage.count"
+              max="coverage.min"
               readonly="isReadonly"
-              state-on="'glyphicon-check'"
-              state-off="'glyphicon-unchecked'"
+              state-on="'fa fa-check-square-o fa-2x text-success'"
+              state-off="'fa fa-square-o fa-2x text-danger'"
             ></rating>
           </div>
         </div>
+
       </div>
 
-      <div class="panel text-center card-2">
+      <div
+        class="panel text-center card-2"
+        style="padding: 10px;"
+      >
         <h4>Skills Assessment</h4>
         <ag:radar:chart
           chart-data="vm.report"
         ></ag:radar:chart>
       </div>
 
-      <div class="panel text-center card-2">
-        <h4>Category Quota</h4>
-        <ag:bar:chart
-          chart-data="vm.quota"
-        ></ag:bar:chart>
-      </div>
-
     </div>
 
     <div class="col-md-8">
 
-
       <!-- <pre ng-bind="vm.feedbackStore.fetch | json"></pre> -->
       <!-- <button ng-click="vm.generateReport()">report</button> -->
-
 
       <div
         ng-repeat="d in ds = (vm.questionsFiltered | filter:vm.search)"
@@ -270,7 +265,7 @@
           class="glyphicon glyphicon-flash"
           ></i> MultiPart
         </span>
-        <div hljs ng-bind-html="::d.body" class="body"></div>
+        <div ng-bind-html="::d.body" class="body"></div>
         <div>
 
           <hr>
@@ -305,8 +300,7 @@
 
           <div
             class="notes"
-            ng-show="'notes' === radioModel"
-            hljs
+            ng-if="'notes' === radioModel"
             ng-bind-html="::d.notes"
           ></div>
 
@@ -314,8 +308,6 @@
             class="feedback"
             ng-show="'feedback' === radioModel"
           >
-            <!-- <pre ng-bind="vm.feedbackStore.fetch(d._id) | json"></pre> -->
-
             <form
               ng-submit="
                 feedback['_questionId'] = d._id;
@@ -378,6 +370,7 @@
                   vm.feedbackStore.destroy(d._id);
                   feedback = {};
                   radioModel = '';
+                  vm.generateReport();
                 "
                 class="btn btn-sm btn-danger"
                 ng-bind="::'Remove'"
