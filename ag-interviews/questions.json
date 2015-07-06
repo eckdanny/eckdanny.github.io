@@ -29,9 +29,9 @@
 				"https://css-tricks.com/interview-questions-css/"
 			],
 			"file": "questions/block-vs-inline-block-vs-inline.md",
-			"title": "What is the difference between inline, inline-block, and block?"
+			"title": "Block vs. Inline vs. Inline-Block"
 		},
-		"body": "<h3>What is the difference between inline, inline-block, and block?</h3>\n",
+		"body": "<h3>Block vs. Inline vs. Inline-Block</h3>\n<h4>What are examples of <code>block</code> and <code>inline</code> elements?</h4>\n<h4>What is the difference between inline, inline-block, and block?</h4>\n",
 		"notes": "<p>Bonus points for bringing up specific details like the fact that you can't transform inline elements.</p>\n"
 	},
 	{

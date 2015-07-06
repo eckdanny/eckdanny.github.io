@@ -8,6 +8,15 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/vendor.07d3c23c.css">
     <link rel="stylesheet" href="styles/main.c3c85673.css">
+
+    <script type="text/javascript">
+    (function fastLoadFonts(document, FontFace) { 'use strict';
+      var font = new FontFace('FontAwesome', 'url(bower_components/font-awesome-sass/assets/fonts/font-awesome/fontawesome-webfont.woff2)', {});
+      font.load().then(function() {
+        document.getElementById('loading-message').style.visibility = 'visible';
+      });
+    })(window.document, window.FontFace);
+    </script>
   </head>
   <body ng-app="app">
     <!--[if lt IE 7]>
@@ -28,7 +37,9 @@
         "
       >
         <h2
+          id="loading-message"
           style="
+            visibility: hidden;
             vertical-align: middle;
             font-size: 3em;
             display: block;
@@ -61,8 +72,8 @@
        ga('send', 'pageview');
     */</script>
 
-    <script src="scripts/vendor.f39d25cf.js"></script>
+    <script src="scripts/vendor.ced3e217.js"></script>
 
-      <script src="scripts/scripts.e4cf6493.js"></script>
+      <script src="scripts/scripts.98cdfa5b.js"></script>
 </body>
 </html>
