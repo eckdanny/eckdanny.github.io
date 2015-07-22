@@ -2,43 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/assemble/cibc-templates/dist/banner-kitchen-sink.html</loc>
-    <lastmod>2015-06-26T20:04:49.293Z</lastmod>
+    <lastmod>2015-07-22T20:49:17.045Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/assemble/cibc-templates/dist/banner-raster-bgs.html</loc>
-    <lastmod>2015-06-26T20:04:49.294Z</lastmod>
+    <lastmod>2015-07-22T20:49:17.046Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/assemble/cibc-templates/dist/bar.html</loc>
-    <lastmod>2015-06-26T20:04:49.294Z</lastmod>
+    <lastmod>2015-07-22T20:49:17.046Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/assemble/cibc-templates/dist/foo.html</loc>
-    <lastmod>2015-06-26T20:04:49.294Z</lastmod>
+    <lastmod>2015-07-22T20:49:17.046Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/assemble/cibc-templates/dist/home.html</loc>
-    <lastmod>2015-06-26T20:04:49.294Z</lastmod>
+    <lastmod>2015-07-22T20:49:17.046Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/assemble/cibc-templates/dist/image-overlay.html</loc>
-    <lastmod>2015-06-26T20:04:49.294Z</lastmod>
+    <lastmod>2015-07-22T20:49:17.047Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/assemble/cibc-templates/dist/landing-page.html</loc>
-    <lastmod>2015-06-26T20:04:49.294Z</lastmod>
+    <lastmod>2015-07-22T20:49:17.047Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://github.com/assemble/cibc-templates/dist/raster-fbs.html</loc>
+    <lastmod>2015-07-22T20:49:17.047Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
