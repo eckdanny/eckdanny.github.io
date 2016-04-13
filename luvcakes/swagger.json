@@ -1,0 +1,483 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.1",
+    "title": "Bakery API"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "bearer": {
+      "description": "JWT-based auth",
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "paths": {
+    "/session/{id}": {
+      "get": {
+        "tags": [
+          "session"
+        ],
+        "security": [
+          "bearer"
+        ],
+        "description": "get/verify session by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "sessionId",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/session": {
+      "get": {
+        "tags": [
+          "session"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "description": "whoami?"
+      },
+      "post": {
+        "tags": [
+          "session"
+        ],
+        "description": "Returns 'Hello' to the caller",
+        "operationId": "hello",
+        "parameters": [
+          {
+            "name": "SessionPost",
+            "in": "body",
+            "description": "Session Params",
+            "required": true,
+            "schema": {
+              "title": "SessionPost",
+              "example": {
+                "username": "foobar",
+                "password": "12345"
+              },
+              "required": [
+                "username",
+                "password"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object"
+                },
+                "cart": {
+                  "type": "object"
+                },
+                "ttl": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "required": [
+                "message"
+              ],
+              "properties": {
+                "ttl": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object"
+                },
+                "cart": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cart": {
+      "post": {
+        "tags": [
+          "cart"
+        ],
+        "description": "Create a new Cart",
+        "parameters": [
+          {
+            "name": "CartPost",
+            "in": "body",
+            "description": "user to add to the system",
+            "required": true,
+            "schema": {
+              "title": "CartPost",
+              "example": {
+                "foo": "foo",
+                "isBar": true,
+                "things": [
+                  "foo",
+                  "bar",
+                  "bizz",
+                  "buzz"
+                ],
+                "testapi": {
+                  "messageId": "kkkk8",
+                  "messageDateTime": "2014-08-17T14:07:30+0530",
+                  "cameraServiceRq": {
+                    "osType": "android",
+                    "deviceType": "samsung555"
+                  }
+                }
+              },
+              "required": [
+                "foo",
+                "isBar",
+                "things"
+              ],
+              "properties": {
+                "foo": {
+                  "type": "string"
+                },
+                "isBar": {
+                  "type": "boolean"
+                },
+                "things": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "name": "Puma",
+                "type": "Dog",
+                "color": "Black",
+                "gender": "Female",
+                "breed": "Mixed"
+              }
+            },
+            "schema": {
+              "title": "Cart",
+              "type": "object",
+              "required": [
+                "_id",
+                "foo"
+              ],
+              "properties": {
+                "_id": {
+                  "type": "string"
+                },
+                "foo": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "cart"
+        ],
+        "description": "get all carts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "CartID",
+            "type": "string"
+          },
+          {
+            "name": "something",
+            "in": "query",
+            "description": "search carts",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cart/{id}": {
+      "get": {
+        "tags": [
+          "cart"
+        ],
+        "description": "get cart by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "CartID",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/cart/{cardId}/item/{itemId}": {
+      "get": {
+        "tags": [
+          "cart"
+        ],
+        "description": "get cartItem by id"
+      },
+      "put": {
+        "tags": [
+          "cart"
+        ],
+        "description": "update cartItem"
+      }
+    },
+    "/hello": {
+      "get": {
+        "description": "Returns 'Hello' to the caller",
+        "operationId": "hello",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "The name of the person to whom to say hello",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/HelloWorldResponse"
+            }
+          },
+          "default": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/subcomponents": {
+      "get": {
+        "operationId": "getSubcomponents",
+        "tags": [
+          "products"
+        ],
+        "summary": "Returns a list of subcomponents",
+        "description": "Returns a list of subcomponents",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Type of Subcomponent",
+            "type": "string",
+            "default": "lazy",
+            "enum": [
+              "flavor",
+              "frosting",
+              "size",
+              "topping"
+            ]
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "_Chocolate_",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "in": "query",
+            "description": "_peanut-butter_",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SubcomponentList"
+            }
+          }
+        }
+      }
+    },
+    "/banner-products": {
+      "get": {
+        "tags": [
+          "products"
+        ],
+        "operationId": "getBannerProducts",
+        "summary": "Returns a list of banner products",
+        "description": "Returns a list of banner products",
+        "parameters": [
+          {
+            "name": "isFeatured",
+            "in": "query",
+            "description": "Featured Products",
+            "type": "string",
+            "enum": [
+              "1",
+              "0"
+            ],
+            "allowEmptyValue": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ProductList"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ProductList": {
+      "title": "ProductList",
+      "type": "array",
+      "items": {
+        "title": "Product",
+        "required": [
+          "_id",
+          "imgUrl",
+          "title",
+          "description",
+          "price",
+          "isFeatured"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "imgUrl": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "isFeatured": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "SubcomponentList": {
+      "type": "array",
+      "items": {
+        "title": "Subcomponent",
+        "required": [
+          "_id",
+          "imgUrl",
+          "label",
+          "type",
+          "value",
+          "foo"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "imgUrl": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "HelloWorldResponse": {
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "ErrorResponse": {
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
